@@ -1,0 +1,3 @@
+\babel@toc {serbianc}{}
+\beamer@sectionintoc {1}{Основни појмови мрежног програмирања}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{IP, DNS}{3}{0}{1}
