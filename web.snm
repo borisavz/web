@@ -5,3 +5,7 @@
 \beamer@slide {fig:tcp_flow}{9}
 \beamer@slide {fig:udp_enc}{13}
 \beamer@slide {fig:udp_header}{13}
+\beamer@slide {fig:mainframe}{17}
+\beamer@slide {fig:terminal}{17}
+\beamer@slide {fig:html}{21}
+\beamer@slide {fig:json}{21}

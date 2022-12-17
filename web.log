@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.12.16)  17 DEC 2022 13:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.12.16)  17 DEC 2022 20:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1347,7 +1347,7 @@ Package hyperref Warning: Glyph not defined in PD1 encoding,
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\cyra' on input line 32.
 
-<images/pcsw.png, id=103, 563.85657pt x 207.77625pt>
+<images/pcsw.png, id=111, 563.85657pt x 207.77625pt>
 File: images/pcsw.png Graphic file (type png)
 <use images/pcsw.png>
 Package pdftex.def Info: images/pcsw.png  used on input line 59.
@@ -1358,7 +1358,7 @@ Package pdftex.def Info: images/pcsw.png  used on input line 59.
 
 
  <./images/pcsw.png>]
-<images/ip.png, id=164, 770.88pt x 418.56375pt>
+<images/ip.png, id=174, 770.88pt x 418.56375pt>
 File: images/ip.png Graphic file (type png)
 <use images/ip.png>
 Package pdftex.def Info: images/ip.png  used on input line 84.
@@ -1369,7 +1369,7 @@ Package pdftex.def Info: images/ip.png  used on input line 84.
 
 
  <./images/ip.png>]
-<images/dns.png, id=226, 794.97pt x 527.9725pt>
+<images/dns.png, id=236, 794.97pt x 527.9725pt>
 File: images/dns.png Graphic file (type png)
 <use images/dns.png>
 Package pdftex.def Info: images/dns.png  used on input line 109.
@@ -1380,12 +1380,12 @@ Package pdftex.def Info: images/dns.png  used on input line 109.
 
 
  <./images/dns.png>]
-<images/enc.png, id=285, 323.70938pt x 237.88875pt>
+<images/enc.png, id=295, 323.70938pt x 237.88875pt>
 File: images/enc.png Graphic file (type png)
 <use images/enc.png>
 Package pdftex.def Info: images/enc.png  used on input line 149.
 (pdftex.def)             Requested size: 205.37926pt x 150.93062pt.
-<images/tcp_http.png, id=286, 375.4025pt x 321.2pt>
+<images/tcp_http.png, id=296, 375.4025pt x 321.2pt>
 File: images/tcp_http.png Graphic file (type png)
 <use images/tcp_http.png>
 Package pdftex.def Info: images/tcp_http.png  used on input line 149.
@@ -1402,15 +1402,15 @@ Package pdftex.def Info: images/tcp_http.png  used on input line 149.
 
 
  <./images/tcp_http.png>]
-<images/udp_enc.png, id=403, 675.52374pt x 192.72pt>
+<images/udp_enc.png, id=413, 675.52374pt x 192.72pt>
 File: images/udp_enc.png Graphic file (type png)
 <use images/udp_enc.png>
-Package pdftex.def Info: images/udp_enc.png  used on input line 176.
+Package pdftex.def Info: images/udp_enc.png  used on input line 180.
 (pdftex.def)             Requested size: 256.72147pt x 73.24023pt.
-<images/udp_header.png, id=404, 375.4025pt x 128.48pt>
+<images/udp_header.png, id=414, 375.4025pt x 128.48pt>
 File: images/udp_header.png Graphic file (type png)
 <use images/udp_header.png>
-Package pdftex.def Info: images/udp_header.png  used on input line 176.
+Package pdftex.def Info: images/udp_header.png  used on input line 180.
 (pdftex.def)             Requested size: 256.72147pt x 87.86711pt.
  [13
 
@@ -1421,6 +1421,239 @@ Package pdftex.def Info: images/udp_header.png  used on input line 176.
 
 
  <./images/udp_header.png>]
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\CYRK' on input line 182.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrl' on input line 182.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyri' on input line 182.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrje' on input line 182.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyre' on input line 182.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrn' on input line 182.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrt' on input line 182.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrs' on input line 182.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyre' on input line 182.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrr' on input line 182.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrv' on input line 182.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyre' on input line 182.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrr' on input line 182.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyra' on input line 182.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrr' on input line 182.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrh' on input line 182.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyri' on input line 182.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrt' on input line 182.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyre' on input line 182.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrk' on input line 182.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrt' on input line 182.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyru' on input line 182.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrr' on input line 182.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyra' on input line 182.
+
+[16
+
+]
+<images/pdp7.jpeg, id=532, 1204.5pt x 903.375pt>
+File: images/pdp7.jpeg Graphic file (type jpg)
+<use images/pdp7.jpeg>
+Package pdftex.def Info: images/pdp7.jpeg  used on input line 238.
+(pdftex.def)             Requested size: 222.48985pt x 166.85985pt.
+<images/DEC_VT100_terminal.jpg, id=533, 220.825pt x 195.73125pt>
+File: images/DEC_VT100_terminal.jpg Graphic file (type jpg)
+<use images/DEC_VT100_terminal.jpg>
+Package pdftex.def Info: images/DEC_VT100_terminal.jpg  used on input line 238.
+
+(pdftex.def)             Requested size: 171.14764pt x 151.70506pt.
+ [17
+
+] [18
+
+
+ <./images/pdp7.jpeg>] [19
+
+
+ <./images/DEC_VT100_terminal.jpg>]
+[20
+
+
+]
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\CYRE' on input line 240.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrv' on input line 240.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyro' on input line 240.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrl' on input line 240.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyru' on input line 240.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrc' on input line 240.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyri' on input line 240.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrje' on input line 240.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyra' on input line 240.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrv' on input line 240.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyre' on input line 240.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrb' on input line 240.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyra' on input line 240.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrp' on input line 240.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrl' on input line 240.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyri' on input line 240.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrk' on input line 240.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyra' on input line 240.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrc' on input line 240.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyri' on input line 240.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyrje' on input line 240.
+
+
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\cyra' on input line 240.
+
+<images/html.png, id=644, 335.2525pt x 321.2pt>
+File: images/html.png Graphic file (type png)
+<use images/html.png>
+Package pdftex.def Info: images/html.png  used on input line 280.
+(pdftex.def)             Requested size: 171.14764pt x 163.97157pt.
+<images/json.png, id=645, 1231.60126pt x 564.1075pt>
+File: images/json.png Graphic file (type png)
+<use images/json.png>
+Package pdftex.def Info: images/json.png  used on input line 280.
+(pdftex.def)             Requested size: 171.14764pt x 78.38919pt.
+[21
+
+] [22
+
+
+] [23
+
+
+ <./images/html.png>] [24
+
+
+ <./images/json.png (PNG copy)>]
 \tf@nav=\write7
 \openout7 = `web.nav'.
 
@@ -1430,32 +1663,38 @@ Package pdftex.def Info: images/udp_header.png  used on input line 176.
 \tf@snm=\write9
 \openout9 = `web.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 178.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 178.
- (./web.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 178.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 178.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 281.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 281.
+
+(./web.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 281.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 281.
 Package rerunfilecheck Info: File `web.out' has not changed.
-(rerunfilecheck)             Checksum: 86333CA29EC6409E928721B173B39FB9;254.
+(rerunfilecheck)             Checksum: 42D3F3C88325BBE42C521848F33A5EEB;331.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 19043 strings out of 482657
- 356306 string characters out of 5957837
- 615473 words of memory out of 5000000
- 33569 multiletter control sequences out of 15000+600000
- 538691 words of font info for 33 fonts, out of 8000000 for 9000
+ 19131 strings out of 482657
+ 357381 string characters out of 5957837
+ 615763 words of memory out of 5000000
+ 33626 multiletter control sequences out of 15000+600000
+ 539499 words of font info for 34 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
  54i,15n,57p,798b,627s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/borisavz/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/lass1000.60
-0pk> </home/borisavz/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/lasx1095.
-600pk> </home/borisavz/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/lass060
-0.600pk> </home/borisavz/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/lass1
-095.600pk> </home/borisavz/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/las
-s1440.600pk>
-Output written on web.pdf (15 pages, 243349 bytes).
+ </home/borisavz/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/lasx1000.60
+0pk> </home/borisavz/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/lass1000.
+600pk> </home/borisavz/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/lasx109
+5.600pk> </home/borisavz/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/lass0
+600.600pk> </home/borisavz/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/las
+s1095.600pk> </home/borisavz/.texlive2019/texmf-var/fonts/pk/ljfour/lh/lh-t2a/l
+ass1440.600pk>
+Output written on web.pdf (24 pages, 562003 bytes).
 PDF statistics:
- 815 PDF objects out of 1000 (max. 8388607)
- 478 compressed objects within 5 object streams
- 43 named destinations out of 1000 (max. 500000)
- 148 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1156 PDF objects out of 1200 (max. 8388607)
+ 733 compressed objects within 8 object streams
+ 67 named destinations out of 1000 (max. 500000)
+ 184 words of extra memory for PDF output out of 10000 (max. 10000000)
 

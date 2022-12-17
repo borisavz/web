@@ -154,6 +154,10 @@
             \item За поруке које стају у један пакет, можемо користити једноставнији \textbf{UDP (User Datagram Protocol)}
             \item Задржавамо адресирање апликација, али губимо гаранцију испоруке
             \item DNS користи UDP
+            \item Омогућава изградњу протокола који имају гаранције испоруке
+            \begin{itemize}
+                \item пример: HTTP3/QUIC
+            \end{itemize}
         \end{itemize}
     
         \framebreak
@@ -174,5 +178,104 @@
             \label{fig:udp_header}
         \end{figure}
     \end{frame}
-
+    
+    \section{Клијент-сервер архитектура}
+    
+    \begin{frame}{Однос између чворова}
+        \begin{itemize}
+            \item До сада смо говорили искључиво о чворовима који учествују у комуникацији
+            \item Видели смо да један чвор започиње комуникацију, а други даје одговор
+            \item У раду уочавамо две врсте односа између чворова:
+            \begin{itemize}
+                \item \textbf{peer-to-peer}: обе стране су подједнако важне у комуникацији
+                \item \textbf{client-server}: клијент се обраћа серверу за податке или обављање акције
+            \end{itemize}
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}[allowframebreaks]{Клијент-сервер архитектура}
+        \begin{itemize}
+            \item Модел настао још раних дана рачунарства
+            \item Рачунари су били велики и скупи
+            \item Било је потребно омогућити дељење ресурса између више корисника
+            \item Клијенти су били далеко једноставнији, главна намена је била слање команде и испис резултата
+            \item Данас је овај приступ познат као \textbf{thin-client}
+        \end{itemize}
+        
+        \framebreak
+        
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.65\textwidth]{images/pdp7.jpeg}
+            \caption{PDP-7 (рачунар)}
+            \label{fig:mainframe}
+        \end{figure}
+        
+        \framebreak
+        
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.5\textwidth]{images/DEC_VT100_terminal.jpg}
+            \caption{DEC VT100 (терминал)}
+            \label{fig:terminal}
+        \end{figure}
+        
+        \framebreak
+        
+        \begin{itemize}
+            \item Кроз године, рачунарска моћ је расла
+            \item Ово је довело до појаве \textbf{PC (Personal Computer)}
+            \begin{itemize}
+                \item користи се непосредно
+                \item без конукурентних корисничких сесија
+            \end{itemize}
+            \item Потреба за централним сервером и даље није потпуно избачена, али је могућа далеко већа интерактивност
+            \item Данас је овај приступ познат као \textbf{thick-client}
+            \begin{itemize}
+                \item пример: Google Docs
+            \end{itemize}
+        \end{itemize}
+    \end{frame}
+    
+    \section{Еволуција веб апликација}
+    
+    \begin{frame}[allowframebreaks]{Еволуција веб апликација}
+        \begin{itemize}
+            \item \textbf{World Wide Web (WWW)} је изумео Тим Бернерс-Ли у CERN-у
+            \item Оригинална замисао је била систем за дељење докумената
+            \item Језик докумената: \textbf{HTML (HyperText Markup Language)}
+            \item Протокол за комуникацију: \textbf{HTTP (HyperText Transfer Protocol)}
+            \item Иницијално садржај је био статички (могуће је прегледање искључиво предефинисаних докумената)
+            \item Убрзо су уочени недостаци и настала је потреба за динамичким садржајем
+        \end{itemize}
+        
+        \framebreak
+        
+        \begin{itemize}
+            \item Идеја: чувати садржај у бази података и на основу њега динамички генерисати HTML документе
+            \item Постоје два решења:
+            \begin{itemize}
+                \item \textbf{server-side render}: HTML документ генеришемо користећи шаблон и вредности из базе података
+                \item \textbf{client-side render}: са сервера учитавамо основни HTML и JavaScript код, након тога размењујемо JSON објекте
+            \end{itemize}
+        \end{itemize}
+        
+        \framebreak
+        
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.5\textwidth]{images/html.png}
+            \caption{HTML документ}
+            \label{fig:html}
+        \end{figure}
+        
+        \framebreak
+        
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.5\textwidth]{images/json.png}
+            \caption{JSON објекат}
+            \label{fig:json}
+        \end{figure}
+    \end{frame}
 \end{document}

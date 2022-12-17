@@ -4,3 +4,5 @@
 \beamer@subsectionintoc {2}{1}{Packet switching}{3}{0}{2}
 \beamer@subsectionintoc {2}{2}{IP, DNS}{5}{0}{2}
 \beamer@subsectionintoc {2}{3}{TCP, UDP}{9}{0}{2}
+\beamer@sectionintoc {3}{Клијент-сервер архитектура}{16}{0}{3}
+\beamer@sectionintoc {4}{Еволуција веб апликација}{21}{0}{4}
