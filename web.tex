@@ -282,7 +282,103 @@
     
     \begin{frame}{HTTP протокол}
         \begin{itemize}
-            \item Основни појмови мрежног програмирања
+            \item Текстуални протокол (поруке једноставно могу да читају и људи)
+            \item Користи TCP (гаранција испоруке је неопходна како би протокол успешно функционисао!)
+            \item Подразумевани порт: 80 (HTTP), 443 (HTTPS)
+            \item Stateless протокол
+            \begin{itemize}
+                \item неопходно је придружити додатне информације уз сваки захтев како би пратили корисничку сесију
+                \item обично преко header-a
+            \end{itemize}
+            \item Путања означава \textbf{ресурс} у систему
+            \begin{itemize}
+                \item додатни атрибути кроз \textbf{query params}
+            \end{itemize}
+            \item Метода означава \textbf{акцију} коју желимо да извршимо над ресурсом
+            \item Статусни код означава да ли је акција успешно изврешна, и ако није, разлог
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}[allowframebreaks]{Request-response}
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.75\textwidth]{images/reqres.png}
+            \caption{Request-response модел}
+            \label{fig:reqres}
+        \end{figure}
+        
+        \framebreak
+        
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.85\textwidth]{images/httpmsgstructure.png}
+            \caption{Садржај \textbf{request} и \textbf{response} порука}
+            \label{fig:reqrescont}
+        \end{figure}
+        
+        \framebreak
+        
+        \begin{itemize}
+            \item Формирамо HTTP захтев (string)
+            \item Извршавамо DNS упит како би добили IP адресу сервера
+            \begin{itemize}
+                \item могуће је и кеширање DNS одговора на клијентској страни
+            \end{itemize}
+            \item Успостављамо TCP конекцију са сервером (подразумевани или наведени порт)
+            \item Захтев шаљемо издељен у пакете
+            \item Чекамо одговор
+            \begin{itemize}
+                \item клијенти обично постављају timeout
+            \end{itemize}
+            \item Затварамо TCP конекцију
+            \begin{itemize}
+                \item потенцијално уско грло уколико у кратком временском периоду шаљемо више захтева
+                \item исправљено у наредним верзијама протокола
+            \end{itemize}
+        \end{itemize}
+        
+        \framebreak
+        
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.85\textwidth]{images/url.png}
+            \caption{URL}
+            \label{fig:url}
+        \end{figure}
+    \end{frame}
+    
+    \begin{frame}{HTTP методе}
+        \begin{itemize}
+            \item \textbf{GET}: добављање ресурса из система
+            \item \textbf{PUT}: измена постојећег ресрса у целости
+            \item \textbf{POST}: додавање новог ресурса у систем
+            \item \textbf{PATCH}: измена дела постојећег ресурса
+            \item \textbf{DELETE}: брисање ресурса из система
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{Status codes}
+        \begin{itemize}
+            \item \textbf{1xx}: информациони одговор
+            \begin{itemize}
+                \item 100 Continue, 101 Switching Protocols, 103 Early Hints, ...
+            \end{itemize}
+            \item \textbf{2xx}: успешан одговор
+            \begin{itemize}
+                \item 200 OK, 201 Created, 202 Accepted, ...
+            \end{itemize}
+            \item \textbf{3xx}: редирекција
+            \begin{itemize}
+                \item 301 Moved Permanently, 302 Found, ...
+            \end{itemize}
+            \item \textbf{4xx}: грешка клијента
+            \begin{itemize}
+                \item 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 405 Method Not Allowed, 415 Unsupported Media Type, 422 Unprocessable Entity, ...
+            \end{itemize}
+            \item \textbf{5xx}: грешка сервера
+            \begin{itemize}
+                \item 500 Internal Server Error, 501 Not Implemented, 502 Bad Gateway, 503 Service Unavailable, 505 HTTP Version Not Supported, ...
+            \end{itemize}
         \end{itemize}
     \end{frame}
 \end{document}
