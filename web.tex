@@ -381,4 +381,152 @@
             \end{itemize}
         \end{itemize}
     \end{frame}
+
+	\section{Архитектура веб апликације}
+    
+	\begin{frame}[allowframebreaks]{Архитектура веб апликације}
+        \begin{itemize}
+			\item Потребно је да омогућимо комуникацију преко HTTP
+			\item И да комуницирамо са базом како би извршавали упите
+			\item Једну акцију може да чини више упита ка бази
+			\item Потребно је запис у бази представити структуром података у жељеном програмском језику
+			\item ...и то су, у суштини, компоненте веб апликације
+        \end{itemize}
+        
+        \framebreak
+        
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.85\textwidth]{images/url.png}
+            \caption{шематски приказ архитектуре}
+            \label{fig:url}
+        \end{figure}
+    \end{frame}
+    
+    \subsection{Controller}
+    
+    \begin{frame}{Controller}
+        \begin{itemize}
+			\item Садржај HTTP захтева претвара у структуру података
+			\item Позива методу из сервисног слоја
+			\item Резултат добијен позивом сервисног слоја претвара у HTTP одговор
+			\item Може да садржи логику за ауторизацију
+			\item Упозорење: грешка коју шаљемо клијенту не сме да открива интерне детаље
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{Пример имплементације: Go/Gorilla Mux}
+    \end{frame}
+    
+    \begin{frame}{Пример имплементације: Java/Spring}
+    \end{frame}
+    
+    \subsection{Service}
+    
+    \begin{frame}{Service}
+        \begin{itemize}
+			\item Садржи пословну логику апликације
+			\item Једна сервисна метода се састоји из позива једне или више метода из repository
+			\item Уколико база података подржава трансакције, сервисна метода је граница трансакције
+			\begin{itemize}
+				\item \textbf{commit} уколико је акција успешна
+				\item \textbf{rollback} уколико је акција неуспешна
+			\end{itemize}
+			\item Садржи комплетне провере права приступа
+			\begin{itemize}
+				\item чест шаблон је да извршимо упит који проверава да ли корисник има право приступа (рецимо, чланство на пројекту), и у зависности од резултата извршимо акцију
+			\end{itemize}
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{Пример имплементације: Go/Gorilla Mux}
+    \end{frame}
+    
+    \begin{frame}{Пример имплементације: Java/Spring}
+    \end{frame}
+    
+    \subsection{Repository}
+    
+    \begin{frame}{Repository}
+        \begin{itemize}
+			\item Једна метода представља један упит над базом података
+			\item Параметре прослеђује у упит
+			\begin{itemize}
+				\item подсетник: потребно је да се одбранимо од injection напада!
+			\end{itemize}
+			\item Резултат упита претвара у одговарајуће структуре података
+			\begin{itemize}
+				\item \textbf{entity} уколико враћамо записе из базе неизмењене
+				\item \textbf{DTO} уколико упит садржи комплекснија пресликавања (пример: генерисање извештаја)
+			\end{itemize}
+			\item У зависности од коришћене базе података/библиотеке, логику за конверзију резултата упита морамо ручно да имплементирамо, или библиотека то чини аутоматски
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{Пример имплементације: Go/Gorilla Mux}
+    \end{frame}
+    
+    \begin{frame}{Пример имплементације: Java/Spring}
+    \end{frame}
+    
+    \subsection{Entity}
+    
+    \begin{frame}{Entity}
+        \begin{itemize}
+			\item Представља записе у бази података
+			\begin{itemize}
+				\item додатно: везе ка другим ентитетима
+        	\end{itemize}
+			\item Омогућује објектно-релационо мапирање
+			\item Може да садржи бизнис логику
+			\begin{itemize}
+				\item тема активне дебате
+        	\end{itemize}
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{Пример имплементације: Go/Gorilla Mux}
+    \end{frame}
+    
+    \begin{frame}{Пример имплементације: Java/Spring}
+    \end{frame}
+    
+    \subsection{Data Transfer Object}
+    
+    \begin{frame}{Data Transfer Object (DTO)}
+        \begin{itemize}
+			\item Проблем: ентитети потенцијално нису погодни за слање клијенту
+			\item Идеја: применити принцип енкапсулације, трансформација одговора у погодан формат
+			\item Ова компонента је опциона, и често није неопходна
+			\item Могуће је и комбиновање уз entity
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{Пример имплементације: Go/Gorilla Mux}
+    \end{frame}
+    
+    \begin{frame}{Пример имплементације: Java/Spring}
+    \end{frame}
+    
+    \subsection{Middleware}
+    
+    \begin{frame}{Middleware}
+        \begin{itemize}
+			\item Често желимо да централизујемо логику која је потребна пре/после извршавања (већине или свих) метода из контролера
+			\begin{itemize}
+				\item валидација токена за ауторизацију
+				\item праћење информација за logging/tracing
+        	\end{itemize}
+			\item Математички посматрано, одговара композицији функције
+			\item У програмским језицима који имају first-class функције (пример: JavaScript, Go) се имплементира као композиција функција
+			\item Уколико то није подржано, имплементира се механизмом који то опонаша (пример: Java/Aspect Oriented Programming)
+			\item Пресрећемо захтев, прослеђујемо га даље или прекидамо ланац
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{Пример имплементације: Go/Gorilla Mux}
+    \end{frame}
+    
+    \begin{frame}{Пример имплементације: Java/Spring}
+    \end{frame}
 \end{document}

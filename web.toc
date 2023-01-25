@@ -1,4 +1,4 @@
-\babel@toc {serbianc}{}
+\babel@toc {serbianc}{}\relax 
 \beamer@sectionintoc {1}{Основни појмови мрежног програмирања}{3}{0}{1}
 \beamer@subsectionintoc {1}{1}{Packet switching}{3}{0}{1}
 \beamer@subsectionintoc {1}{2}{IP, DNS}{5}{0}{1}
@@ -6,3 +6,10 @@
 \beamer@sectionintoc {2}{Клијент-сервер архитектура}{16}{0}{2}
 \beamer@sectionintoc {3}{Еволуција веб апликација}{21}{0}{3}
 \beamer@sectionintoc {4}{HTTP протокол}{25}{0}{4}
+\beamer@sectionintoc {5}{Архитектура веб апликације}{32}{0}{5}
+\beamer@subsectionintoc {5}{1}{Controller}{34}{0}{5}
+\beamer@subsectionintoc {5}{2}{Service}{37}{0}{5}
+\beamer@subsectionintoc {5}{3}{Repository}{40}{0}{5}
+\beamer@subsectionintoc {5}{4}{Entity}{43}{0}{5}
+\beamer@subsectionintoc {5}{5}{Data Transfer Object}{46}{0}{5}
+\beamer@subsectionintoc {5}{6}{Middleware}{49}{0}{5}
