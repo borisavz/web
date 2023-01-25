@@ -1,7 +1,12 @@
 \documentclass{beamer}
+% \documentclass[aspectratio=169]{beamer}
+
 \usepackage[serbianc]{babel}
 \usepackage{graphicx}
 \usepackage{makeidx}
+\usepackage{listings}
+\usepackage{adjustbox}
+
 \hypersetup{unicode}
 \makeindex
 \usefonttheme{professionalfonts}
@@ -51,7 +56,7 @@
 
         \begin{figure}
             \centering
-            \includegraphics[width=0.75\textwidth]{images/pcsw.png}
+            \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/pcsw.png}
             \caption{комутација пакета (packet switching)}
             \label{fig:pcsw}
         \end{figure}
@@ -76,7 +81,7 @@
 
         \begin{figure}
             \centering
-            \includegraphics[width=0.75\textwidth]{images/ip.png}
+            \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/ip.png}
             \caption{упрошћена структура IP пакета}
             \label{fig:ip}
         \end{figure}
@@ -101,7 +106,7 @@
 
         \begin{figure}
             \centering
-            \includegraphics[width=0.75\textwidth]{images/dns.png}
+            \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/dns.png}
             \caption{DNS упит}
             \label{fig:dns}
         \end{figure}
@@ -132,7 +137,7 @@
         
         \begin{figure}
             \centering
-            \includegraphics[width=0.6\textwidth]{images/enc.png}
+            \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/enc.png}
             \caption{енкапсулација пакета}
             \label{fig:tcp_enc}
         \end{figure}
@@ -141,7 +146,7 @@
         
         \begin{figure}
             \centering
-            \includegraphics[width=0.5\textwidth]{images/tcp_http.png}
+            \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/tcp_http.png}
             \caption{Ток TCP комуникације}
             \label{fig:tcp_flow}
         \end{figure}
@@ -163,7 +168,7 @@
         
         \begin{figure}
             \centering
-            \includegraphics[width=0.75\textwidth]{images/udp_enc.png}
+            \includegraphics[height=\dimexpr \textheight - 4\baselineskip\relax]{images/udp_enc.png}
             \caption{енкапсулација пакета}
             \label{fig:udp_enc}
         \end{figure}
@@ -172,7 +177,7 @@
         
         \begin{figure}
             \centering
-            \includegraphics[width=0.75\textwidth]{images/udp_header.png}
+            \includegraphics[height=\dimexpr \textheight - 4\baselineskip\relax]{images/udp_header.png}
             \caption{Садржај заглавља}
             \label{fig:udp_header}
         \end{figure}
@@ -205,7 +210,7 @@
         
         \begin{figure}
             \centering
-            \includegraphics[width=0.65\textwidth]{images/pdp7.jpeg}
+            \includegraphics[height=\dimexpr \textheight - 4\baselineskip\relax]{images/pdp7.jpeg}
             \caption{PDP-7 (рачунар)}
             \label{fig:mainframe}
         \end{figure}
@@ -214,7 +219,7 @@
         
         \begin{figure}
             \centering
-            \includegraphics[width=0.5\textwidth]{images/DEC_VT100_terminal.jpg}
+            \includegraphics[height=\dimexpr \textheight - 4\baselineskip\relax]{images/DEC_VT100_terminal.jpg}
             \caption{DEC VT100 (терминал)}
             \label{fig:terminal}
         \end{figure}
@@ -263,7 +268,7 @@
         
         \begin{figure}
             \centering
-            \includegraphics[width=0.5\textwidth]{images/html.png}
+            \includegraphics[height=\dimexpr \textheight - 4\baselineskip\relax]{images/html.png}
             \caption{HTML документ}
             \label{fig:html}
         \end{figure}
@@ -272,7 +277,7 @@
         
         \begin{figure}
             \centering
-            \includegraphics[width=0.5\textwidth]{images/json.png}
+            \includegraphics[height=\dimexpr \textheight - 4\baselineskip\relax]{images/json.png}
             \caption{JSON објекат}
             \label{fig:json}
         \end{figure}
@@ -302,7 +307,7 @@
     \begin{frame}[allowframebreaks]{Request-response}
         \begin{figure}
             \centering
-            \includegraphics[width=0.75\textwidth]{images/reqres.png}
+            \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/reqres.png}
             \caption{Request-response модел}
             \label{fig:reqres}
         \end{figure}
@@ -311,7 +316,7 @@
         
         \begin{figure}
             \centering
-            \includegraphics[width=0.85\textwidth]{images/httpmsgstructure.png}
+            \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/httpmsgstructure.png}
             \caption{Садржај \textbf{request} и \textbf{response} порука}
             \label{fig:reqrescont}
         \end{figure}
@@ -341,7 +346,7 @@
         
         \begin{figure}
             \centering
-            \includegraphics[width=0.85\textwidth]{images/url.png}
+            \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/url.png}
             \caption{URL}
             \label{fig:url}
         \end{figure}
@@ -397,7 +402,7 @@
         
         \begin{figure}
             \centering
-            \includegraphics[width=0.85\textwidth]{images/url.png}
+            \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/url.png}
             \caption{шематски приказ архитектуре}
             \label{fig:url}
         \end{figure}
@@ -415,10 +420,40 @@
         \end{itemize}
     \end{frame}
     
-    \begin{frame}{Пример имплементације: Go/Gorilla Mux}
+    \begin{frame}[fragile]{Пример имплементације: Go/Gorilla Mux}
+    	\begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
+			\begin{lstlisting}[language=go]
+func (c *AuthController) VerifyRegistration(w http.ResponseWriter, req *http.Request) {
+	ctx, span := c.tracer.Start(req.Context(), "AuthController.VerifyRegistration")
+	defer span.End()
+
+	verificationId := mux.Vars(req)["verificationId"]
+
+	appErr := c.authService.VerifyRegistration(ctx, verificationId)
+	if appErr != nil {
+		span.SetStatus(codes.Error, appErr.Error())
+		http.Error(w, appErr.Message, appErr.Code)
+		return
+	}
+}
+			\end{lstlisting}
+		\end{adjustbox}
     \end{frame}
     
-    \begin{frame}{Пример имплементације: Java/Spring}
+    \begin{frame}[fragile]{Пример имплементације: Java/Spring}
+        \begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
+			\begin{lstlisting}[language=java]
+@PostMapping("/{postId}/comments")
+@IsLoggedIn
+public long addPostComment(
+		@PathVariable long postId,
+		@RequestBody @Valid CreateCommentDTO createCommentDTO
+) {
+    return postService.addPostComment(postId, createCommentDTO);
+}
+
+			\end{lstlisting}
+		\end{adjustbox}
     \end{frame}
     
     \subsection{Service}
@@ -439,10 +474,64 @@
         \end{itemize}
     \end{frame}
     
-    \begin{frame}{Пример имплементације: Go/Gorilla Mux}
+    \begin{frame}[fragile]{Пример имплементације: Go/Gorilla Mux}
+    	\begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
+			\begin{lstlisting}[language=go]
+func (s *AuthService) VerifyRegistration(ctx context.Context, verificationId string) *app_errors.AppError {
+	serviceCtx, span := s.tracer.Start(ctx, "AuthService.VerifyRegistration")
+	defer span.End()
+
+	username, err := s.authRepository.GetVerification(serviceCtx, verificationId)
+	if err != nil {
+		span.SetStatus(codes.Error, err.Error())
+		return &app_errors.AppError{500, ""}
+	}
+
+	user, err := s.authRepository.GetUser(serviceCtx, username)
+
+	user.Enabled = true
+
+	err = s.authRepository.SaveUser(serviceCtx, user)
+	if err != nil {
+		span.SetStatus(codes.Error, err.Error())
+		return &app_errors.AppError{500, ""}
+	}
+
+	err = s.authRepository.DeleteVerification(serviceCtx, verificationId)
+	if err != nil {
+		span.SetStatus(codes.Error, err.Error())
+		return &app_errors.AppError{500, ""}
+	}
+
+	return nil
+}
+			\end{lstlisting}
+		\end{adjustbox}
     \end{frame}
     
-    \begin{frame}{Пример имплементације: Java/Spring}
+    \begin{frame}[fragile]{Пример имплементације: Java/Spring}
+        \begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
+			\begin{lstlisting}[language=java]
+@Transactional
+public void downvotePost(long postId) {
+    Post post = postRepository.getById(postId);
+    User user = userRepository.getById(authUser().getId());
+
+    if(post.getCommunity().isUserBanned(user))
+        throw new NotAllowedToParticipateException();
+
+    reactionRepository.deletePostReactionByUser(authUser().getId(), postId);
+
+    Reaction reaction = new Reaction();
+
+    reaction.setMadeBy(user);
+    reaction.setPost(post);
+    reaction.setType(ReactionType.DOWNVOTE);
+
+    reactionRepository.save(reaction);
+}
+			\end{lstlisting}
+		\end{adjustbox}
     \end{frame}
     
     \subsection{Repository}
@@ -463,10 +552,45 @@
         \end{itemize}
     \end{frame}
     
-    \begin{frame}{Пример имплементације: Go/Gorilla Mux}
+    \begin{frame}[fragile]{Пример имплементације: Go/Gorilla Mux}
+    	\begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
+			\begin{lstlisting}[language=go]
+func (r *ConsulAuthRepository) DeleteUser(ctx context.Context, username string) error {
+	_, span := r.tracer.Start(ctx, "ConsulAuthRepository.DeleteUser")
+	defer span.End()
+
+	kv := r.cli.KV()
+
+	userKey, err := r.constructKey("user/%s/", username)
+	if err != nil {
+		span.SetStatus(codes.Error, err.Error())
+		return err
+	}
+
+	_, err = kv.Delete(userKey, nil)
+	if err != nil {
+		span.SetStatus(codes.Error, err.Error())
+		return err
+	}
+
+	return nil
+}
+			\end{lstlisting}
+		\end{adjustbox}
     \end{frame}
     
-    \begin{frame}{Пример имплементације: Java/Spring}
+    \begin{frame}[fragile]{Пример имплементације: Java/Spring}
+        \begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
+			\begin{lstlisting}[language=java]
+@Modifying
+@Query(value = "" +
+        " DELETE FROM reaction" +
+        " WHERE made_by_id = ?1" +
+        " AND post_id = ?2",
+        nativeQuery = true)
+void deletePostReactionByUser(long userId, long postId);
+			\end{lstlisting}
+		\end{adjustbox}
     \end{frame}
     
     \subsection{Entity}
@@ -485,10 +609,54 @@
         \end{itemize}
     \end{frame}
     
-    \begin{frame}{Пример имплементације: Go/Gorilla Mux}
+    \begin{frame}[fragile]{Пример имплементације: Go/Gorilla Mux}
+    	\begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
+			\begin{lstlisting}[language=go]
+type User struct {
+	Username     string `json:"username"`
+	PasswordHash string `json:"passwordHash"`
+	Email        string `json:"email"`
+	Role         string `json:"role"`
+	Enabled      bool   `json:"enabled"`
+}
+			\end{lstlisting}
+		\end{adjustbox}
     \end{frame}
     
-    \begin{frame}{Пример имплементације: Java/Spring}
+    \begin{frame}[fragile]{Пример имплементације: Java/Spring}
+        \begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
+			\begin{lstlisting}[language=java]
+@Getter
+@Setter
+@Entity
+@EqualsAndHashCode(of = "id")
+@SQLDelete(sql = "UPDATE post SET deleted = true WHERE id=?")
+@Where(clause = "deleted=false")
+public class Post {
+
+    @Id
+    @GeneratedValue
+    private long id;
+
+    private String title;
+    private String text;
+    private LocalDate creationDate;
+
+    private long imageId;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    private User postedBy;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Community community;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Flair flair;
+
+    private boolean deleted;
+}
+			\end{lstlisting}
+		\end{adjustbox}
     \end{frame}
     
     \subsection{Data Transfer Object}
@@ -502,10 +670,44 @@
         \end{itemize}
     \end{frame}
     
-    \begin{frame}{Пример имплементације: Go/Gorilla Mux}
+            \begin{frame}[fragile]{Пример имплементације: Go/Gorilla Mux}
+    	\begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
+			\begin{lstlisting}[language=go]
+type RegisterUser struct {
+	Username     string `json:"username" validate:"required"`
+	Password     string `json:"password" validate:"required,password"`
+	Email        string `json:"email" validate:"required,email"`
+	FirstName    string `json:"firstName" validate:"required"`
+	LastName     string `json:"lastName" validate:"required"`
+	Town         string `json:"town" validate:"required"`
+	Gender       string `json:"gender" validate:"required"`
+	CaptchaToken string `json:"captchaToken" validate:"required"`
+}
+			\end{lstlisting}
+		\end{adjustbox}
     \end{frame}
     
-    \begin{frame}{Пример имплементације: Java/Spring}
+    \begin{frame}[fragile]{Пример имплементације: Java/Spring}
+        \begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
+			\begin{lstlisting}[language=java]
+@Getter
+@Setter
+public class CommentDTO {
+
+    private long id;
+
+    private String text;
+    private LocalDate timestamp;
+    private long postId;
+
+    private List<CommentDTO> replies;
+    private UserDTO writtenBy;
+
+    private ReactionType reaction;
+    private int karma;
+}
+			\end{lstlisting}
+		\end{adjustbox}
     \end{frame}
     
     \subsection{Middleware}
@@ -524,9 +726,108 @@
         \end{itemize}
     \end{frame}
     
-    \begin{frame}{Пример имплементације: Go/Gorilla Mux}
+        \begin{frame}[fragile]{Пример имплементације: Go/Gorilla Mux}
+    	\begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
+			\begin{lstlisting}[language=go]
+func ExtractJWTUserMiddleware(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		if authHeader, ok := r.Header["Authorization"]; ok {
+			tokenString := authHeader[0]
+
+			token, err := jwt.Parse(tokenString, func(token *jwt.Token) (interface{}, error) {
+				return []byte(os.Getenv("SECRET_KEY")), nil
+			})
+
+			if claims, ok := token.Claims.(jwt.MapClaims); ok && token.Valid {
+				authUser := model.AuthUser{
+					Username: claims["username"].(string),
+					Role:     claims["role"].(string),
+					Exp:      time.UnixMilli(int64(claims["exp"].(float64))),
+				}
+
+				authCtx := context.WithValue(r.Context(), "authUser", authUser)
+
+				next.ServeHTTP(w, r.WithContext(authCtx))
+			} else {
+				http.Error(w, "Invalid token", 401)
+			}
+		} else {
+			next.ServeHTTP(w, r.WithContext(newCtx))
+		}
+	})
+}
+			\end{lstlisting}
+		\end{adjustbox}
     \end{frame}
     
-    \begin{frame}{Пример имплементације: Java/Spring}
+    \begin{frame}[fragile,allowframebreaks]{Пример имплементације: Java/Spring}
+        \begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
+			\begin{lstlisting}[language=java]
+@Component
+@RequiredArgsConstructor
+public class JwtTokenFilter extends OncePerRequestFilter {
+
+    private final JwtTokenUtil jwtTokenUtil;
+    private final UserRepository userRepository;
+
+    @Override
+    protected void doFilterInternal(HttpServletRequest request,
+                                    HttpServletResponse response,
+                                    FilterChain chain)
+            throws ServletException, IOException {
+        // Get authorization header and validate
+        final String token = request.getHeader(HttpHeaders.AUTHORIZATION);
+        if (isEmpty(token)) {
+            chain.doFilter(request, response);
+            return;
+        }
+
+        if (!jwtTokenUtil.validate(token)) {
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            return;
+        }
+
+        // SNIP
+    }
+}
+			\end{lstlisting}
+		\end{adjustbox}
+		
+		\framebreak
+		
+		\begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
+			\begin{lstlisting}[language=java]
+@Component
+@RequiredArgsConstructor
+public class JwtTokenFilter extends OncePerRequestFilter {
+
+    private final JwtTokenUtil jwtTokenUtil;
+    private final UserRepository userRepository;
+
+    @Override
+    protected void doFilterInternal(HttpServletRequest request,
+                                    HttpServletResponse response,
+                                    FilterChain chain)
+            throws ServletException, IOException {
+
+        // SNIP
+        
+        // Get user identity and set it on the spring security context
+        User user = userRepository.findByUsername(jwtTokenUtil.getUsername(token)).orElse(null);
+        UserDetails userDetails = user == null ? null : new AuthUserDetails(user);
+
+        UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(
+                userDetails,
+                null,
+                userDetails == null ? List.of() : userDetails.getAuthorities()
+        );
+
+        SecurityContextHolder.getContext().setAuthentication(authentication);
+        chain.doFilter(request, response);
+    }
+}
+			\end{lstlisting}
+		\end{adjustbox}
     \end{frame}
+    
 \end{document}
