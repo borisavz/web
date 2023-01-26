@@ -387,15 +387,15 @@
         \end{itemize}
     \end{frame}
 
-	\section{Архитектура веб апликације}
+    \section{Архитектура веб апликације}
     
-	\begin{frame}[allowframebreaks]{Архитектура веб апликације}
+    \begin{frame}[allowframebreaks]{Архитектура веб апликације}
         \begin{itemize}
-			\item Потребно је да омогућимо комуникацију преко HTTP
-			\item И да комуницирамо са базом како би извршавали упите
-			\item Једну акцију може да чини више упита ка бази
-			\item Потребно је запис у бази представити структуром података у жељеном програмском језику
-			\item ...и то су, у суштини, компоненте веб апликације
+            \item Потребно је да омогућимо комуникацију преко HTTP
+            \item И да комуницирамо са базом како би извршавали упите
+            \item Једну акцију може да чини више упита ка бази
+            \item Потребно је запис у бази представити структуром података у жељеном програмском језику
+            \item ...и то су, у суштини, компоненте веб апликације
         \end{itemize}
         
         \framebreak
@@ -412,106 +412,106 @@
     
     \begin{frame}{Controller}
         \begin{itemize}
-			\item Садржај HTTP захтева претвара у структуру података
-			\item Позива методу из сервисног слоја
-			\item Резултат добијен позивом сервисног слоја претвара у HTTP одговор
-			\item Може да садржи логику за ауторизацију
-			\item Упозорење: грешка коју шаљемо клијенту не сме да открива интерне детаље
+            \item Садржај HTTP захтева претвара у структуру података
+            \item Позива методу из сервисног слоја
+            \item Резултат добијен позивом сервисног слоја претвара у HTTP одговор
+            \item Може да садржи логику за ауторизацију
+            \item Упозорење: грешка коју шаљемо клијенту не сме да открива интерне детаље
         \end{itemize}
     \end{frame}
     
     \begin{frame}[fragile]{Пример имплементације: Go/Gorilla Mux}
-    	\begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
-			\begin{lstlisting}[language=go]
+        \begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
+            \begin{lstlisting}[language=go]
 func (c *AuthController) VerifyRegistration(w http.ResponseWriter, req *http.Request) {
-	ctx, span := c.tracer.Start(req.Context(), "AuthController.VerifyRegistration")
-	defer span.End()
+    ctx, span := c.tracer.Start(req.Context(), "AuthController.VerifyRegistration")
+    defer span.End()
 
-	verificationId := mux.Vars(req)["verificationId"]
+    verificationId := mux.Vars(req)["verificationId"]
 
-	appErr := c.authService.VerifyRegistration(ctx, verificationId)
-	if appErr != nil {
-		span.SetStatus(codes.Error, appErr.Error())
-		http.Error(w, appErr.Message, appErr.Code)
-		return
-	}
+    appErr := c.authService.VerifyRegistration(ctx, verificationId)
+    if appErr != nil {
+        span.SetStatus(codes.Error, appErr.Error())
+        http.Error(w, appErr.Message, appErr.Code)
+        return
+    }
 }
-			\end{lstlisting}
-		\end{adjustbox}
+            \end{lstlisting}
+        \end{adjustbox}
     \end{frame}
     
     \begin{frame}[fragile]{Пример имплементације: Java/Spring}
         \begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
-			\begin{lstlisting}[language=java]
+            \begin{lstlisting}[language=java]
 @PostMapping("/{postId}/comments")
 @IsLoggedIn
 public long addPostComment(
-		@PathVariable long postId,
-		@RequestBody @Valid CreateCommentDTO createCommentDTO
+        @PathVariable long postId,
+        @RequestBody @Valid CreateCommentDTO createCommentDTO
 ) {
     return postService.addPostComment(postId, createCommentDTO);
 }
 
-			\end{lstlisting}
-		\end{adjustbox}
+            \end{lstlisting}
+        \end{adjustbox}
     \end{frame}
     
     \subsection{Service}
     
     \begin{frame}{Service}
         \begin{itemize}
-			\item Садржи пословну логику апликације
-			\item Једна сервисна метода се састоји из позива једне или више метода из repository
-			\item Уколико база података подржава трансакције, сервисна метода је граница трансакције
-			\begin{itemize}
-				\item \textbf{commit} уколико је акција успешна
-				\item \textbf{rollback} уколико је акција неуспешна
-			\end{itemize}
-			\item Садржи комплетне провере права приступа
-			\begin{itemize}
-				\item чест шаблон је да извршимо упит који проверава да ли корисник има право приступа (рецимо, чланство на пројекту), и у зависности од резултата извршимо акцију
-			\end{itemize}
+            \item Садржи пословну логику апликације
+            \item Једна сервисна метода се састоји из позива једне или више метода из repository
+            \item Уколико база података подржава трансакције, сервисна метода је граница трансакције
+            \begin{itemize}
+                \item \textbf{commit} уколико је акција успешна
+                \item \textbf{rollback} уколико је акција неуспешна
+            \end{itemize}
+            \item Садржи комплетне провере права приступа
+            \begin{itemize}
+                \item чест шаблон је да извршимо упит који проверава да ли корисник има право приступа (рецимо, чланство на пројекту), и у зависности од резултата извршимо акцију
+            \end{itemize}
         \end{itemize}
     \end{frame}
     
     \begin{frame}[fragile]{Пример имплементације: Go/Gorilla Mux}
-    	\begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
-			\begin{lstlisting}[language=go]
+        \begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
+            \begin{lstlisting}[language=go]
 func (s *AuthService) VerifyRegistration(ctx context.Context, verificationId string) *app_errors.AppError {
-	serviceCtx, span := s.tracer.Start(ctx, "AuthService.VerifyRegistration")
-	defer span.End()
+    serviceCtx, span := s.tracer.Start(ctx, "AuthService.VerifyRegistration")
+    defer span.End()
 
-	username, err := s.authRepository.GetVerification(serviceCtx, verificationId)
-	if err != nil {
-		span.SetStatus(codes.Error, err.Error())
-		return &app_errors.AppError{500, ""}
-	}
+    username, err := s.authRepository.GetVerification(serviceCtx, verificationId)
+    if err != nil {
+        span.SetStatus(codes.Error, err.Error())
+        return &app_errors.AppError{500, ""}
+    }
 
-	user, err := s.authRepository.GetUser(serviceCtx, username)
+    user, err := s.authRepository.GetUser(serviceCtx, username)
 
-	user.Enabled = true
+    user.Enabled = true
 
-	err = s.authRepository.SaveUser(serviceCtx, user)
-	if err != nil {
-		span.SetStatus(codes.Error, err.Error())
-		return &app_errors.AppError{500, ""}
-	}
+    err = s.authRepository.SaveUser(serviceCtx, user)
+    if err != nil {
+        span.SetStatus(codes.Error, err.Error())
+        return &app_errors.AppError{500, ""}
+    }
 
-	err = s.authRepository.DeleteVerification(serviceCtx, verificationId)
-	if err != nil {
-		span.SetStatus(codes.Error, err.Error())
-		return &app_errors.AppError{500, ""}
-	}
+    err = s.authRepository.DeleteVerification(serviceCtx, verificationId)
+    if err != nil {
+        span.SetStatus(codes.Error, err.Error())
+        return &app_errors.AppError{500, ""}
+    }
 
-	return nil
+    return nil
 }
-			\end{lstlisting}
-		\end{adjustbox}
+            \end{lstlisting}
+        \end{adjustbox}
     \end{frame}
     
     \begin{frame}[fragile]{Пример имплементације: Java/Spring}
         \begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
-			\begin{lstlisting}[language=java]
+            \begin{lstlisting}[language=java]
 @Transactional
 public void downvotePost(long postId) {
     Post post = postRepository.getById(postId);
@@ -530,58 +530,58 @@ public void downvotePost(long postId) {
 
     reactionRepository.save(reaction);
 }
-			\end{lstlisting}
-		\end{adjustbox}
+            \end{lstlisting}
+        \end{adjustbox}
     \end{frame}
     
     \subsection{Repository}
     
     \begin{frame}{Repository}
         \begin{itemize}
-			\item Једна метода представља један упит над базом података
-			\item Параметре прослеђује у упит
-			\begin{itemize}
-				\item подсетник: потребно је да се одбранимо од injection напада!
-			\end{itemize}
-			\item Резултат упита претвара у одговарајуће структуре података
-			\begin{itemize}
-				\item \textbf{entity} уколико враћамо записе из базе неизмењене
-				\item \textbf{DTO} уколико упит садржи комплекснија пресликавања (пример: генерисање извештаја)
-			\end{itemize}
-			\item У зависности од коришћене базе података/библиотеке, логику за конверзију резултата упита морамо ручно да имплементирамо, или библиотека то чини аутоматски
+            \item Једна метода представља један упит над базом података
+            \item Параметре прослеђује у упит
+            \begin{itemize}
+                \item подсетник: потребно је да се одбранимо од injection напада!
+            \end{itemize}
+            \item Резултат упита претвара у одговарајуће структуре података
+            \begin{itemize}
+                \item \textbf{entity} уколико враћамо записе из базе неизмењене
+                \item \textbf{DTO} уколико упит садржи комплекснија пресликавања (пример: генерисање извештаја)
+            \end{itemize}
+            \item У зависности од коришћене базе података/библиотеке, логику за конверзију резултата упита морамо ручно да имплементирамо, или библиотека то чини аутоматски
         \end{itemize}
     \end{frame}
     
     \begin{frame}[fragile]{Пример имплементације: Go/Gorilla Mux}
-    	\begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
-			\begin{lstlisting}[language=go]
+        \begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
+            \begin{lstlisting}[language=go]
 func (r *ConsulAuthRepository) DeleteUser(ctx context.Context, username string) error {
-	_, span := r.tracer.Start(ctx, "ConsulAuthRepository.DeleteUser")
-	defer span.End()
+    _, span := r.tracer.Start(ctx, "ConsulAuthRepository.DeleteUser")
+    defer span.End()
 
-	kv := r.cli.KV()
+    kv := r.cli.KV()
 
-	userKey, err := r.constructKey("user/%s/", username)
-	if err != nil {
-		span.SetStatus(codes.Error, err.Error())
-		return err
-	}
+    userKey, err := r.constructKey("user/%s/", username)
+    if err != nil {
+        span.SetStatus(codes.Error, err.Error())
+        return err
+    }
 
-	_, err = kv.Delete(userKey, nil)
-	if err != nil {
-		span.SetStatus(codes.Error, err.Error())
-		return err
-	}
+    _, err = kv.Delete(userKey, nil)
+    if err != nil {
+        span.SetStatus(codes.Error, err.Error())
+        return err
+    }
 
-	return nil
+    return nil
 }
-			\end{lstlisting}
-		\end{adjustbox}
+            \end{lstlisting}
+        \end{adjustbox}
     \end{frame}
     
     \begin{frame}[fragile]{Пример имплементације: Java/Spring}
         \begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
-			\begin{lstlisting}[language=java]
+            \begin{lstlisting}[language=java]
 @Modifying
 @Query(value = "" +
         " DELETE FROM reaction" +
@@ -589,43 +589,43 @@ func (r *ConsulAuthRepository) DeleteUser(ctx context.Context, username string) 
         " AND post_id = ?2",
         nativeQuery = true)
 void deletePostReactionByUser(long userId, long postId);
-			\end{lstlisting}
-		\end{adjustbox}
+            \end{lstlisting}
+        \end{adjustbox}
     \end{frame}
     
     \subsection{Entity}
     
     \begin{frame}{Entity}
         \begin{itemize}
-			\item Представља записе у бази података
-			\begin{itemize}
-				\item додатно: везе ка другим ентитетима
-        	\end{itemize}
-			\item Омогућује објектно-релационо мапирање
-			\item Може да садржи бизнис логику
-			\begin{itemize}
-				\item тема активне дебате
-        	\end{itemize}
+            \item Представља записе у бази података
+            \begin{itemize}
+                \item додатно: везе ка другим ентитетима
+            \end{itemize}
+            \item Омогућује објектно-релационо мапирање
+            \item Може да садржи бизнис логику
+            \begin{itemize}
+                \item тема активне дебате
+            \end{itemize}
         \end{itemize}
     \end{frame}
     
     \begin{frame}[fragile]{Пример имплементације: Go/Gorilla Mux}
-    	\begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
-			\begin{lstlisting}[language=go]
+        \begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
+            \begin{lstlisting}[language=go]
 type User struct {
-	Username     string `json:"username"`
-	PasswordHash string `json:"passwordHash"`
-	Email        string `json:"email"`
-	Role         string `json:"role"`
-	Enabled      bool   `json:"enabled"`
+    Username     string `json:"username"`
+    PasswordHash string `json:"passwordHash"`
+    Email        string `json:"email"`
+    Role         string `json:"role"`
+    Enabled      bool   `json:"enabled"`
 }
-			\end{lstlisting}
-		\end{adjustbox}
+            \end{lstlisting}
+        \end{adjustbox}
     \end{frame}
     
     \begin{frame}[fragile]{Пример имплементације: Java/Spring}
-        \begin{adjustbox}{width=\textwidth,height=0.7\textheight,keepaspectratio}
-			\begin{lstlisting}[language=java]
+        \begin{adjustbox}{width=0.65\textwidth,height=\textheight,keepaspectratio}
+            \begin{lstlisting}[language=java]
 @Getter
 @Setter
 @Entity
@@ -655,41 +655,41 @@ public class Post {
 
     private boolean deleted;
 }
-			\end{lstlisting}
-		\end{adjustbox}
+            \end{lstlisting}
+        \end{adjustbox}
     \end{frame}
     
     \subsection{Data Transfer Object}
     
     \begin{frame}{Data Transfer Object (DTO)}
         \begin{itemize}
-			\item Проблем: ентитети потенцијално нису погодни за слање клијенту
-			\item Идеја: применити принцип енкапсулације, трансформација одговора у погодан формат
-			\item Ова компонента је опциона, и често није неопходна
-			\item Могуће је и комбиновање уз entity
+            \item Проблем: ентитети потенцијално нису погодни за слање клијенту
+            \item Идеја: применити принцип енкапсулације, трансформација одговора у погодан формат
+            \item Ова компонента је опциона, и често није неопходна
+            \item Могуће је и комбиновање уз entity
         \end{itemize}
     \end{frame}
     
-            \begin{frame}[fragile]{Пример имплементације: Go/Gorilla Mux}
-    	\begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
-			\begin{lstlisting}[language=go]
+    \begin{frame}[fragile]{Пример имплементације: Go/Gorilla Mux}
+        \begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
+            \begin{lstlisting}[language=go]
 type RegisterUser struct {
-	Username     string `json:"username" validate:"required"`
-	Password     string `json:"password" validate:"required,password"`
-	Email        string `json:"email" validate:"required,email"`
-	FirstName    string `json:"firstName" validate:"required"`
-	LastName     string `json:"lastName" validate:"required"`
-	Town         string `json:"town" validate:"required"`
-	Gender       string `json:"gender" validate:"required"`
-	CaptchaToken string `json:"captchaToken" validate:"required"`
+    Username     string `json:"username" validate:"required"`
+    Password     string `json:"password" validate:"required,password"`
+    Email        string `json:"email" validate:"required,email"`
+    FirstName    string `json:"firstName" validate:"required"`
+    LastName     string `json:"lastName" validate:"required"`
+    Town         string `json:"town" validate:"required"`
+    Gender       string `json:"gender" validate:"required"`
+    CaptchaToken string `json:"captchaToken" validate:"required"`
 }
-			\end{lstlisting}
-		\end{adjustbox}
+            \end{lstlisting}
+        \end{adjustbox}
     \end{frame}
     
     \begin{frame}[fragile]{Пример имплементације: Java/Spring}
-        \begin{adjustbox}{width=\textwidth,height=0.7\textheight,keepaspectratio}
-			\begin{lstlisting}[language=java]
+        \begin{adjustbox}{width=0.7\textwidth,height=\textheight,keepaspectratio}
+            \begin{lstlisting}[language=java]
 @Getter
 @Setter
 public class CommentDTO {
@@ -706,128 +706,93 @@ public class CommentDTO {
     private ReactionType reaction;
     private int karma;
 }
-			\end{lstlisting}
-		\end{adjustbox}
+            \end{lstlisting}
+        \end{adjustbox}
     \end{frame}
     
     \subsection{Middleware}
     
     \begin{frame}{Middleware}
         \begin{itemize}
-			\item Често желимо да централизујемо логику која је потребна пре/после извршавања (већине или свих) метода из контролера
-			\begin{itemize}
-				\item валидација токена за ауторизацију
-				\item праћење информација за logging/tracing
-        	\end{itemize}
-			\item Математички посматрано, одговара композицији функције
-			\item У програмским језицима који имају first-class функције (пример: JavaScript, Go) се имплементира као композиција функција
-			\item Уколико то није подржано, имплементира се механизмом који то опонаша (пример: Java/Aspect Oriented Programming)
-			\item Пресрећемо захтев, прослеђујемо га даље или прекидамо ланац
+            \item Често желимо да централизујемо логику која је потребна пре/после извршавања (већине или свих) метода из контролера
+            \begin{itemize}
+                \item валидација токена за ауторизацију
+                \item праћење информација за logging/tracing
+            \end{itemize}
+            \item Математички посматрано, одговара композицији функције
+            \item У програмским језицима који имају first-class функције (пример: JavaScript, Go) се имплементира као композиција функција
+            \item Уколико то није подржано, имплементира се механизмом који то опонаша (пример: Java/Aspect Oriented Programming)
+            \item Пресрећемо захтев, прослеђујемо га даље или прекидамо ланац
         \end{itemize}
     \end{frame}
     
         \begin{frame}[fragile]{Пример имплементације: Go/Gorilla Mux}
-    	\begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
-			\begin{lstlisting}[language=go]
+        \begin{adjustbox}{width=\textwidth,height=0.7\textheight,keepaspectratio}
+            \begin{lstlisting}[language=go]
 func ExtractJWTUserMiddleware(next http.Handler) http.Handler {
-	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		if authHeader, ok := r.Header["Authorization"]; ok {
-			tokenString := authHeader[0]
+    return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+        if authHeader, ok := r.Header["Authorization"]; ok {
+            tokenString := authHeader[0]
 
-			token, err := jwt.Parse(tokenString, func(token *jwt.Token) (interface{}, error) {
-				return []byte(os.Getenv("SECRET_KEY")), nil
-			})
+            token, err := jwt.Parse(tokenString, func(token *jwt.Token) (interface{}, error) {
+                return []byte(os.Getenv("SECRET_KEY")), nil
+            })
 
-			if claims, ok := token.Claims.(jwt.MapClaims); ok && token.Valid {
-				authUser := model.AuthUser{
-					Username: claims["username"].(string),
-					Role:     claims["role"].(string),
-					Exp:      time.UnixMilli(int64(claims["exp"].(float64))),
-				}
+            if claims, ok := token.Claims.(jwt.MapClaims); ok && token.Valid {
+                authUser := model.AuthUser{
+                    Username: claims["username"].(string),
+                    Role:     claims["role"].(string),
+                    Exp:      time.UnixMilli(int64(claims["exp"].(float64))),
+                }
 
-				authCtx := context.WithValue(r.Context(), "authUser", authUser)
+                authCtx := context.WithValue(r.Context(), "authUser", authUser)
 
-				next.ServeHTTP(w, r.WithContext(authCtx))
-			} else {
-				http.Error(w, "Invalid token", 401)
-			}
-		} else {
-			next.ServeHTTP(w, r.WithContext(newCtx))
-		}
-	})
+                next.ServeHTTP(w, r.WithContext(authCtx))
+            } else {
+                http.Error(w, "Invalid token", 401)
+            }
+        } else {
+            next.ServeHTTP(w, r.WithContext(newCtx))
+        }
+    })
 }
-			\end{lstlisting}
-		\end{adjustbox}
+            \end{lstlisting}
+        \end{adjustbox}
     \end{frame}
     
-    \begin{frame}[fragile,allowframebreaks]{Пример имплементације: Java/Spring}
+    \begin{frame}[fragile]{Пример имплементације: Java/Spring}
         \begin{adjustbox}{width=\textwidth,height=0.7\textheight,keepaspectratio}
-			\begin{lstlisting}[language=java]
-@Component
-@RequiredArgsConstructor
-public class JwtTokenFilter extends OncePerRequestFilter {
-
-    private final JwtTokenUtil jwtTokenUtil;
-    private final UserRepository userRepository;
-
-    @Override
-    protected void doFilterInternal(HttpServletRequest request,
-                                    HttpServletResponse response,
-                                    FilterChain chain)
-            throws ServletException, IOException {
-        // Get authorization header and validate
-        final String token = request.getHeader(HttpHeaders.AUTHORIZATION);
-        if (isEmpty(token)) {
-            chain.doFilter(request, response);
-            return;
-        }
-
-        if (!jwtTokenUtil.validate(token)) {
-            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-            return;
-        }
-
-        // SNIP
-    }
-}
-			\end{lstlisting}
-		\end{adjustbox}
-		
-		\framebreak
-		
-		\begin{adjustbox}{width=\textwidth,height=0.7\textheight,keepaspectratio}
-			\begin{lstlisting}[language=java]
-@Component
-@RequiredArgsConstructor
-public class JwtTokenFilter extends OncePerRequestFilter {
-
-    private final JwtTokenUtil jwtTokenUtil;
-    private final UserRepository userRepository;
-
-    @Override
-    protected void doFilterInternal(HttpServletRequest request,
-                                    HttpServletResponse response,
-                                    FilterChain chain)
-            throws ServletException, IOException {
-
-        // SNIP
-        
-        // Get user identity and set it on the spring security context
-        User user = userRepository.findByUsername(jwtTokenUtil.getUsername(token)).orElse(null);
-        UserDetails userDetails = user == null ? null : new AuthUserDetails(user);
-
-        UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(
-                userDetails,
-                null,
-                userDetails == null ? List.of() : userDetails.getAuthorities()
-        );
-
-        SecurityContextHolder.getContext().setAuthentication(authentication);
+            \begin{lstlisting}[language=java]
+@Override
+protected void doFilterInternal(HttpServletRequest request,
+                                HttpServletResponse response,
+                                FilterChain chain)
+        throws ServletException, IOException {
+    final String token = request.getHeader(HttpHeaders.AUTHORIZATION);
+    if (isEmpty(token)) {
         chain.doFilter(request, response);
+        return;
     }
+
+    if (!jwtTokenUtil.validate(token)) {
+        response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+        return;
+    }
+
+    User user = userRepository.findByUsername(jwtTokenUtil.getUsername(token)).orElse(null);
+    UserDetails userDetails = user == null ? null : new AuthUserDetails(user);
+
+    UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(
+            userDetails,
+            null,
+            userDetails == null ? List.of() : userDetails.getAuthorities()
+    );
+
+    SecurityContextHolder.getContext().setAuthentication(authentication);
+    chain.doFilter(request, response);
 }
-			\end{lstlisting}
-		\end{adjustbox}
+            \end{lstlisting}
+        \end{adjustbox}
     \end{frame}
     
 \end{document}

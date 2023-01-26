@@ -1,68 +1,33 @@
 \frametitle{Пример имплементације: Java/Spring}
 \begin{adjustbox}{width=\textwidth,height=0.7\textheight,keepaspectratio}
-			\begin{lstlisting}[language=java]
-@Component
-@RequiredArgsConstructor
-public class JwtTokenFilter extends OncePerRequestFilter {
-
-    private final JwtTokenUtil jwtTokenUtil;
-    private final UserRepository userRepository;
-
-    @Override
-    protected void doFilterInternal(HttpServletRequest request,
-                                    HttpServletResponse response,
-                                    FilterChain chain)
-            throws ServletException, IOException {
-        // Get authorization header and validate
-        final String token = request.getHeader(HttpHeaders.AUTHORIZATION);
-        if (isEmpty(token)) {
-            chain.doFilter(request, response);
-            return;
-        }
-
-        if (!jwtTokenUtil.validate(token)) {
-            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-            return;
-        }
-
-        // SNIP
-    }
-}
-			\end{lstlisting}
-		\end{adjustbox}
-		
-		\framebreak
-		
-		\begin{adjustbox}{width=\textwidth,height=0.7\textheight,keepaspectratio}
-			\begin{lstlisting}[language=java]
-@Component
-@RequiredArgsConstructor
-public class JwtTokenFilter extends OncePerRequestFilter {
-
-    private final JwtTokenUtil jwtTokenUtil;
-    private final UserRepository userRepository;
-
-    @Override
-    protected void doFilterInternal(HttpServletRequest request,
-                                    HttpServletResponse response,
-                                    FilterChain chain)
-            throws ServletException, IOException {
-
-        // SNIP
-
-        // Get user identity and set it on the spring security context
-        User user = userRepository.findByUsername(jwtTokenUtil.getUsername(token)).orElse(null);
-        UserDetails userDetails = user == null ? null : new AuthUserDetails(user);
-
-        UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(
-                userDetails,
-                null,
-                userDetails == null ? List.of() : userDetails.getAuthorities()
-        );
-
-        SecurityContextHolder.getContext().setAuthentication(authentication);
+            \begin{lstlisting}[language=java]
+@Override
+protected void doFilterInternal(HttpServletRequest request,
+                                HttpServletResponse response,
+                                FilterChain chain)
+        throws ServletException, IOException {
+    final String token = request.getHeader(HttpHeaders.AUTHORIZATION);
+    if (isEmpty(token)) {
         chain.doFilter(request, response);
+        return;
     }
+
+    if (!jwtTokenUtil.validate(token)) {
+        response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+        return;
+    }
+
+    User user = userRepository.findByUsername(jwtTokenUtil.getUsername(token)).orElse(null);
+    UserDetails userDetails = user == null ? null : new AuthUserDetails(user);
+
+    UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(
+            userDetails,
+            null,
+            userDetails == null ? List.of() : userDetails.getAuthorities()
+    );
+
+    SecurityContextHolder.getContext().setAuthentication(authentication);
+    chain.doFilter(request, response);
 }
-			\end{lstlisting}
-		\end{adjustbox}
+            \end{lstlisting}
+        \end{adjustbox}

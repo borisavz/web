@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.1.25)  26 JAN 2023 12:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.1.25)  26 JAN 2023 12:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1210,12 +1210,12 @@ Package pdftex.def Info: images/udp_header.png  used on input line 184.
  <./images/udp_header.png>] [16
 
 ]
-<images/pdp7.jpeg, id=564, 1204.5pt x 903.375pt>
+<images/pdp7.jpeg, id=565, 1204.5pt x 903.375pt>
 File: images/pdp7.jpeg Graphic file (type jpg)
 <use images/pdp7.jpeg>
 Package pdftex.def Info: images/pdp7.jpeg  used on input line 242.
 (pdftex.def)             Requested size: 232.77214pt x 174.5791pt.
-<images/DEC_VT100_terminal.jpg, id=565, 220.825pt x 195.73125pt>
+<images/DEC_VT100_terminal.jpg, id=566, 220.825pt x 195.73125pt>
 File: images/DEC_VT100_terminal.jpg Graphic file (type jpg)
 <use images/DEC_VT100_terminal.jpg>
 Package pdftex.def Info: images/DEC_VT100_terminal.jpg  used on input line 242.
@@ -1257,17 +1257,17 @@ Package pdftex.def Info: images/json.png  used on input line 284.
  <./images/json.png (PNG copy)>] [25
 
 ]
-<images/reqres.png, id=820, 699.61375pt x 239.89626pt>
+<images/reqres.png, id=822, 699.61375pt x 239.89626pt>
 File: images/reqres.png Graphic file (type png)
 <use images/reqres.png>
 Package pdftex.def Info: images/reqres.png  used on input line 353.
 (pdftex.def)             Requested size: 342.30133pt x 117.37448pt.
-<images/httpmsgstructure.png, id=821, 1243.64626pt x 369.38pt>
+<images/httpmsgstructure.png, id=823, 1243.64626pt x 369.38pt>
 File: images/httpmsgstructure.png Graphic file (type png)
 <use images/httpmsgstructure.png>
 Package pdftex.def Info: images/httpmsgstructure.png  used on input line 353.
 (pdftex.def)             Requested size: 342.29791pt x 101.66718pt.
-<images/url.png, id=822, 709.65125pt x 168.63pt>
+<images/url.png, id=824, 709.65125pt x 168.63pt>
 File: images/url.png Graphic file (type png)
 <use images/url.png>
 Package pdftex.def Info: images/url.png  used on input line 353.
@@ -1339,28 +1339,18 @@ Overfull \hbox (225.64732pt too wide) in paragraph at lines 4--5
  []
 
 
-Overfull \hbox (225.64732pt too wide) in paragraph at lines 5--6
+Overfull \hbox (199.53502pt too wide) in paragraph at lines 5--6
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (29.80504pt too wide) in paragraph at lines 8--10
+Overfull \hbox (3.69273pt too wide) in paragraph at lines 8--10
 [][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (121.1981pt too wide) in paragraph at lines 10--11
+Overfull \hbox (95.0858pt too wide) in paragraph at lines 10--11
 [][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (42.86119pt too wide) in paragraph at lines 12--13
-[][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (36.33311pt too wide) in paragraph at lines 13--14
-[][][][][][][][][][][][][][][][][][][] 
  []
 
 ) [35
@@ -1371,7 +1361,7 @@ Overfull \hbox (36.33311pt too wide) in paragraph at lines 13--14
  (./web.vrb (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-Overfull \hbox (108.14195pt too wide) in paragraph at lines 8--9
+Overfull \hbox (55.91734pt too wide) in paragraph at lines 8--9
 [][][][][][][][][][] 
  []
 
@@ -1393,43 +1383,28 @@ Overfull \hbox (356.20885pt too wide) in paragraph at lines 4--5
  []
 
 
-Overfull \hbox (186.47887pt too wide) in paragraph at lines 5--6
+Overfull \hbox (160.36656pt too wide) in paragraph at lines 5--6
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (212.59117pt too wide) in paragraph at lines 8--9
+Overfull \hbox (186.47887pt too wide) in paragraph at lines 8--9
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (23.27696pt too wide) in paragraph at lines 10--11
-[][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (95.0858pt too wide) in paragraph at lines 14--16
+Overfull \hbox (68.9735pt too wide) in paragraph at lines 14--16
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (29.80504pt too wide) in paragraph at lines 18--19
+Overfull \hbox (3.69273pt too wide) in paragraph at lines 18--19
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (23.27696pt too wide) in paragraph at lines 20--21
-[][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (160.36656pt too wide) in paragraph at lines 24--25
+Overfull \hbox (134.25426pt too wide) in paragraph at lines 24--25
 [][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (23.27696pt too wide) in paragraph at lines 26--27
-[][][][][][][][][][][][][][][][] 
  []
 
 ) [38
@@ -1465,23 +1440,13 @@ Overfull \hbox (225.64732pt too wide) in paragraph at lines 4--5
  []
 
 
-Overfull \hbox (134.25426pt too wide) in paragraph at lines 5--6
+Overfull \hbox (108.14195pt too wide) in paragraph at lines 5--6
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (49.38927pt too wide) in paragraph at lines 10--11
+Overfull \hbox (23.27696pt too wide) in paragraph at lines 10--11
 [][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (23.27696pt too wide) in paragraph at lines 12--13
-[][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (23.27696pt too wide) in paragraph at lines 18--19
-[][][][][][][][][][][][][][][][] 
  []
 
 ) [41
@@ -1512,7 +1477,7 @@ Overfull \hbox (55.91734pt too wide) in paragraph at lines 8--9
  []
 
 )
-Overfull \vbox (121.34349pt too high) detected at line 660
+Overfull \vbox (2.67319pt too high) detected at line 660
  []
 
 [45
@@ -1523,42 +1488,42 @@ Overfull \vbox (121.34349pt too high) detected at line 660
 \openout4 = `web.vrb'.
 
  (./web.vrb
-Overfull \hbox (82.02965pt too wide) in paragraph at lines 5--6
+Overfull \hbox (55.91734pt too wide) in paragraph at lines 5--6
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (140.78233pt too wide) in paragraph at lines 6--7
+Overfull \hbox (114.67003pt too wide) in paragraph at lines 6--7
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (101.61388pt too wide) in paragraph at lines 7--8
+Overfull \hbox (75.50157pt too wide) in paragraph at lines 7--8
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (88.55772pt too wide) in paragraph at lines 8--9
+Overfull \hbox (62.44542pt too wide) in paragraph at lines 8--9
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (82.02965pt too wide) in paragraph at lines 9--10
+Overfull \hbox (55.91734pt too wide) in paragraph at lines 9--10
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (55.91734pt too wide) in paragraph at lines 10--11
+Overfull \hbox (29.80504pt too wide) in paragraph at lines 10--11
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (68.9735pt too wide) in paragraph at lines 11--12
+Overfull \hbox (42.86119pt too wide) in paragraph at lines 11--12
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (108.14195pt too wide) in paragraph at lines 12--13
+Overfull \hbox (82.02965pt too wide) in paragraph at lines 12--13
 [][][][][][][][][][][][][][][][][][] 
  []
 
@@ -1567,11 +1532,7 @@ Overfull \hbox (108.14195pt too wide) in paragraph at lines 12--13
 ]
 \openout4 = `web.vrb'.
 
- (./web.vrb)
-Overfull \vbox (90.68703pt too high) detected at line 711
- []
-
-[48
+ (./web.vrb) [48
 
 ] [49
 
@@ -1584,67 +1545,52 @@ Overfull \hbox (68.9735pt too wide) in paragraph at lines 4--5
  []
 
 
-Overfull \hbox (166.89464pt too wide) in paragraph at lines 5--6
+Overfull \hbox (140.78233pt too wide) in paragraph at lines 5--6
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (101.61388pt too wide) in paragraph at lines 6--7
+Overfull \hbox (49.38927pt too wide) in paragraph at lines 6--7
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (349.68077pt too wide) in paragraph at lines 9--10
+Overfull \hbox (271.34386pt too wide) in paragraph at lines 9--10
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (147.31041pt too wide) in paragraph at lines 10--11
+Overfull \hbox (42.86119pt too wide) in paragraph at lines 10--11
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (245.23155pt too wide) in paragraph at lines 13--14
+Overfull \hbox (166.89464pt too wide) in paragraph at lines 13--14
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (42.86119pt too wide) in paragraph at lines 14--15
-[][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (166.89464pt too wide) in paragraph at lines 15--16
+Overfull \hbox (36.33311pt too wide) in paragraph at lines 15--16
 [][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (140.78233pt too wide) in paragraph at lines 16--17
+Overfull \hbox (10.22081pt too wide) in paragraph at lines 16--17
 [][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (290.92809pt too wide) in paragraph at lines 17--18
+Overfull \hbox (160.36656pt too wide) in paragraph at lines 17--18
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (277.87193pt too wide) in paragraph at lines 20--22
+Overfull \hbox (173.42271pt too wide) in paragraph at lines 20--22
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (134.25426pt too wide) in paragraph at lines 22--23
-[][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (95.0858pt too wide) in paragraph at lines 24--25
-[][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (75.50157pt too wide) in paragraph at lines 27--28
+Overfull \hbox (29.80504pt too wide) in paragraph at lines 22--23
 [][][][][][][][][][][][][][][][] 
  []
 
@@ -1654,93 +1600,51 @@ Overfull \hbox (75.50157pt too wide) in paragraph at lines 27--28
 \openout4 = `web.vrb'.
 
  (./web.vrb
-Overfull \hbox (36.33311pt too wide) in paragraph at lines 6--8
-[][][][][][][][][][][][][] 
+Overfull \hbox (42.86119pt too wide) in paragraph at lines 5--6
+[][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (68.9735pt too wide) in paragraph at lines 12--13
-[][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (82.02965pt too wide) in paragraph at lines 13--14
+Overfull \hbox (55.91734pt too wide) in paragraph at lines 6--7
 [][][][][][][] 
  []
 
 
-Overfull \hbox (10.22081pt too wide) in paragraph at lines 14--15
-[][][][][][][] 
- []
-
-
-Overfull \hbox (140.78233pt too wide) in paragraph at lines 17--18
+Overfull \hbox (114.67003pt too wide) in paragraph at lines 9--10
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (101.61388pt too wide) in paragraph at lines 24--25
+Overfull \hbox (75.50157pt too wide) in paragraph at lines 16--17
 [][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (36.33311pt too wide) in paragraph at lines 40--42
-[][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (68.9735pt too wide) in paragraph at lines 46--47
-[][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (82.02965pt too wide) in paragraph at lines 47--48
-[][][][][][][] 
- []
-
-
-Overfull \hbox (10.22081pt too wide) in paragraph at lines 48--49
-[][][][][][][] 
- []
-
-
-Overfull \hbox (114.67003pt too wide) in paragraph at lines 53--54
-[][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (284.40001pt too wide) in paragraph at lines 54--55
+Overfull \hbox (258.2877pt too wide) in paragraph at lines 20--21
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (193.00694pt too wide) in paragraph at lines 55--57
+Overfull \hbox (166.89464pt too wide) in paragraph at lines 21--23
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (317.04039pt too wide) in paragraph at lines 57--58
+Overfull \hbox (290.92809pt too wide) in paragraph at lines 23--24
 [][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (166.89464pt too wide) in paragraph at lines 60--61
+Overfull \hbox (140.78233pt too wide) in paragraph at lines 26--27
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (160.36656pt too wide) in paragraph at lines 63--64
+Overfull \hbox (134.25426pt too wide) in paragraph at lines 29--30
 [][][][][][][][][][][] 
  []
 
-)
-Overfull \vbox (42.50305pt too high) detected at line 831
- []
-
-[51
-
-] [52
-
+) [51
 
 ]
 \tf@nav=\write7
@@ -1756,59 +1660,28 @@ Overfull \vbox (42.50305pt too high) detected at line 831
 
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `web.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `web.out':
-(rerunfilecheck)             Before: 2EEE42BEE629402CFC819D5F11F66D42;2209
-(rerunfilecheck)             After:  9CEADD7DBAAEA88878F0CC0A58E61899;2209.
+Package rerunfilecheck Info: File `web.out' has not changed.
+(rerunfilecheck)             Checksum: 9CEADD7DBAAEA88878F0CC0A58E61899;2209.
  ) 
 Here is how much of TeX's memory you used:
- 26893 strings out of 478238
- 502411 string characters out of 5850456
- 998393 words of memory out of 5000000
- 44403 multiletter control sequences out of 15000+600000
- 481995 words of font info for 57 fonts, out of 8000000 for 9000
+ 26887 strings out of 478238
+ 502241 string characters out of 5850456
+ 986564 words of memory out of 5000000
+ 44406 multiletter control sequences out of 15000+600000
+ 481113 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,122p,407b,1638s stack positions out of 5000i,500n,10000p,200000b,80000s
-
-pdfTeX warning (dest): name{Outline0.5.6.43} has been referenced but does not e
-xist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Outline0.5.5.40} has been referenced but does not e
-xist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Outline0.5.4.37} has been referenced but does not e
-xist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Outline0.5.3.34} has been referenced but does not e
-xist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Outline0.5.2.31} has been referenced but does not e
-xist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Outline0.5.1.28} has been referenced but does not e
-xist, replaced by a fixed one
-
-{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}{/usr/share/te
-xmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts
-/type1/public/cm-super/sfsi1095.pfb></usr/share/texmf-dist/fonts/type1/public/c
-m-super/sfss0600.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss100
-0.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb></usr/sha
-re/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/share/texmf-dist/f
-onts/type1/public/cm-super/sfsx1000.pfb></usr/share/texmf-dist/fonts/type1/publ
-ic/cm-super/sfsx1095.pfb>
-Output written on web.pdf (52 pages, 757173 bytes).
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/
+texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</usr/share/texmf-dist/fon
+ts/type1/public/cm-super/sfss0600.pfb></usr/share/texmf-dist/fonts/type1/public
+/cm-super/sfss1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss1
+095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/cm-super/sfsx1000.pfb></usr/share/texmf-dist
+/fonts/type1/public/cm-super/sfsx1095.pfb>
+Output written on web.pdf (51 pages, 740638 bytes).
 PDF statistics:
- 1661 PDF objects out of 1728 (max. 8388607)
- 1541 compressed objects within 16 object streams
- 139 named destinations out of 1000 (max. 500000)
+ 1620 PDF objects out of 1728 (max. 8388607)
+ 1503 compressed objects within 16 object streams
+ 131 named destinations out of 1000 (max. 500000)
  273 words of extra memory for PDF output out of 10000 (max. 10000000)
 
