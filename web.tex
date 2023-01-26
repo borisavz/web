@@ -1,5 +1,5 @@
 \documentclass{beamer}
-% \documentclass[aspectratio=169]{beamer}
+%\documentclass[aspectratio=169]{beamer}
 
 \usepackage[serbianc]{babel}
 \usepackage{graphicx}
@@ -56,7 +56,7 @@
 
         \begin{figure}
             \centering
-            \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/pcsw.png}
+            \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{images/pcsw.png}
             \caption{комутација пакета (packet switching)}
             \label{fig:pcsw}
         \end{figure}
@@ -106,7 +106,7 @@
 
         \begin{figure}
             \centering
-            \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/dns.png}
+            \includegraphics[width=\textwidth,height=0.7\textheight,keepaspectratio]{images/dns.png}
             \caption{DNS упит}
             \label{fig:dns}
         \end{figure}
@@ -137,7 +137,7 @@
         
         \begin{figure}
             \centering
-            \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/enc.png}
+            \includegraphics[width=\textwidth,height=0.7\textheight,keepaspectratio]{images/enc.png}
             \caption{енкапсулација пакета}
             \label{fig:tcp_enc}
         \end{figure}
@@ -146,7 +146,7 @@
         
         \begin{figure}
             \centering
-            \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/tcp_http.png}
+            \includegraphics[width=\textwidth,height=0.7\textheight,keepaspectratio]{images/tcp_http.png}
             \caption{Ток TCP комуникације}
             \label{fig:tcp_flow}
         \end{figure}
@@ -168,7 +168,7 @@
         
         \begin{figure}
             \centering
-            \includegraphics[height=\dimexpr \textheight - 4\baselineskip\relax]{images/udp_enc.png}
+            \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/udp_enc.png}
             \caption{енкапсулација пакета}
             \label{fig:udp_enc}
         \end{figure}
@@ -177,7 +177,7 @@
         
         \begin{figure}
             \centering
-            \includegraphics[height=\dimexpr \textheight - 4\baselineskip\relax]{images/udp_header.png}
+            \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/udp_header.png}
             \caption{Садржај заглавља}
             \label{fig:udp_header}
         \end{figure}
@@ -210,7 +210,7 @@
         
         \begin{figure}
             \centering
-            \includegraphics[height=\dimexpr \textheight - 4\baselineskip\relax]{images/pdp7.jpeg}
+            \includegraphics[width=\textwidth,height=0.7\textheight,keepaspectratio]{images/pdp7.jpeg}
             \caption{PDP-7 (рачунар)}
             \label{fig:mainframe}
         \end{figure}
@@ -219,7 +219,7 @@
         
         \begin{figure}
             \centering
-            \includegraphics[height=\dimexpr \textheight - 4\baselineskip\relax]{images/DEC_VT100_terminal.jpg}
+            \includegraphics[width=\textwidth,height=0.7\textheight,keepaspectratio]{images/DEC_VT100_terminal.jpg}
             \caption{DEC VT100 (терминал)}
             \label{fig:terminal}
         \end{figure}
@@ -268,7 +268,7 @@
         
         \begin{figure}
             \centering
-            \includegraphics[height=\dimexpr \textheight - 4\baselineskip\relax]{images/html.png}
+            \includegraphics[width=\textwidth,height=0.7\textheight,keepaspectratio]{images/html.png}
             \caption{HTML документ}
             \label{fig:html}
         \end{figure}
@@ -277,7 +277,7 @@
         
         \begin{figure}
             \centering
-            \includegraphics[height=\dimexpr \textheight - 4\baselineskip\relax]{images/json.png}
+            \includegraphics[width=\textwidth,height=0.7\textheight,keepaspectratio]{images/json.png}
             \caption{JSON објекат}
             \label{fig:json}
         \end{figure}
@@ -624,7 +624,7 @@ type User struct {
     \end{frame}
     
     \begin{frame}[fragile]{Пример имплементације: Java/Spring}
-        \begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
+        \begin{adjustbox}{width=\textwidth,height=0.7\textheight,keepaspectratio}
 			\begin{lstlisting}[language=java]
 @Getter
 @Setter
@@ -688,7 +688,7 @@ type RegisterUser struct {
     \end{frame}
     
     \begin{frame}[fragile]{Пример имплементације: Java/Spring}
-        \begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
+        \begin{adjustbox}{width=\textwidth,height=0.7\textheight,keepaspectratio}
 			\begin{lstlisting}[language=java]
 @Getter
 @Setter
@@ -761,7 +761,7 @@ func ExtractJWTUserMiddleware(next http.Handler) http.Handler {
     \end{frame}
     
     \begin{frame}[fragile,allowframebreaks]{Пример имплементације: Java/Spring}
-        \begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
+        \begin{adjustbox}{width=\textwidth,height=0.7\textheight,keepaspectratio}
 			\begin{lstlisting}[language=java]
 @Component
 @RequiredArgsConstructor
@@ -795,7 +795,7 @@ public class JwtTokenFilter extends OncePerRequestFilter {
 		
 		\framebreak
 		
-		\begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
+		\begin{adjustbox}{width=\textwidth,height=0.7\textheight,keepaspectratio}
 			\begin{lstlisting}[language=java]
 @Component
 @RequiredArgsConstructor

@@ -1,5 +1,5 @@
 \frametitle{Пример имплементације: Java/Spring}
-\begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
+\begin{adjustbox}{width=\textwidth,height=0.7\textheight,keepaspectratio}
 			\begin{lstlisting}[language=java]
 @Component
 @RequiredArgsConstructor
@@ -33,7 +33,7 @@ public class JwtTokenFilter extends OncePerRequestFilter {
 		
 		\framebreak
 		
-		\begin{adjustbox}{width=\textwidth,height=\textheight,keepaspectratio}
+		\begin{adjustbox}{width=\textwidth,height=0.7\textheight,keepaspectratio}
 			\begin{lstlisting}[language=java]
 @Component
 @RequiredArgsConstructor
