@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.1.25)  27 JAN 2023 13:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.1.25)  27 JAN 2023 16:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1133,7 +1133,7 @@ Dictionary: translator-theorem-dictionary, Language: English
 [2
 
 ]
-<images/pcsw.png, id=164, 563.85657pt x 207.77625pt>
+<images/pcsw.png, id=173, 563.85657pt x 207.77625pt>
 File: images/pcsw.png Graphic file (type png)
 <use images/pcsw.png>
 Package pdftex.def Info: images/pcsw.png  used on input line 63.
@@ -1144,7 +1144,7 @@ Package pdftex.def Info: images/pcsw.png  used on input line 63.
 
 
  <./images/pcsw.png>]
-<images/ip.png, id=227, 770.88pt x 418.56375pt>
+<images/ip.png, id=235, 770.88pt x 418.56375pt>
 File: images/ip.png Graphic file (type png)
 <use images/ip.png>
 Package pdftex.def Info: images/ip.png  used on input line 88.
@@ -1159,7 +1159,7 @@ Overfull \vbox (0.70825pt too high) detected at line 88
 
 
  <./images/ip.png>]
-<images/dns.png, id=290, 794.97pt x 527.9725pt>
+<images/dns.png, id=298, 794.97pt x 527.9725pt>
 File: images/dns.png Graphic file (type png)
 <use images/dns.png>
 Package pdftex.def Info: images/dns.png  used on input line 113.
@@ -1170,12 +1170,12 @@ Package pdftex.def Info: images/dns.png  used on input line 113.
 
 
  <./images/dns.png>]
-<images/enc.png, id=348, 323.70938pt x 237.88875pt>
+<images/enc.png, id=356, 323.70938pt x 237.88875pt>
 File: images/enc.png Graphic file (type png)
 <use images/enc.png>
 Package pdftex.def Info: images/enc.png  used on input line 153.
 (pdftex.def)             Requested size: 237.57036pt x 174.58658pt.
-<images/tcp_http.png, id=349, 375.4025pt x 321.2pt>
+<images/tcp_http.png, id=357, 375.4025pt x 321.2pt>
 File: images/tcp_http.png Graphic file (type png)
 <use images/tcp_http.png>
 Package pdftex.def Info: images/tcp_http.png  used on input line 153.
@@ -1192,12 +1192,12 @@ Package pdftex.def Info: images/tcp_http.png  used on input line 153.
 
 
  <./images/tcp_http.png>]
-<images/udp_enc.png, id=466, 675.52374pt x 192.72pt>
+<images/udp_enc.png, id=474, 675.52374pt x 192.72pt>
 File: images/udp_enc.png Graphic file (type png)
 <use images/udp_enc.png>
 Package pdftex.def Info: images/udp_enc.png  used on input line 184.
 (pdftex.def)             Requested size: 342.2964pt x 97.65364pt.
-<images/udp_header.png, id=467, 375.4025pt x 128.48pt>
+<images/udp_header.png, id=475, 375.4025pt x 128.48pt>
 File: images/udp_header.png Graphic file (type png)
 <use images/udp_header.png>
 Package pdftex.def Info: images/udp_header.png  used on input line 184.
@@ -1213,12 +1213,12 @@ Package pdftex.def Info: images/udp_header.png  used on input line 184.
  <./images/udp_header.png>] [16
 
 ]
-<images/pdp7.jpeg, id=585, 1204.5pt x 903.375pt>
+<images/pdp7.jpeg, id=593, 1204.5pt x 903.375pt>
 File: images/pdp7.jpeg Graphic file (type jpg)
 <use images/pdp7.jpeg>
 Package pdftex.def Info: images/pdp7.jpeg  used on input line 242.
 (pdftex.def)             Requested size: 232.77214pt x 174.5791pt.
-<images/DEC_VT100_terminal.jpg, id=586, 220.825pt x 195.73125pt>
+<images/DEC_VT100_terminal.jpg, id=594, 220.825pt x 195.73125pt>
 File: images/DEC_VT100_terminal.jpg Graphic file (type jpg)
 <use images/DEC_VT100_terminal.jpg>
 Package pdftex.def Info: images/DEC_VT100_terminal.jpg  used on input line 242.
@@ -1236,12 +1236,12 @@ Package pdftex.def Info: images/DEC_VT100_terminal.jpg  used on input line 242.
 
 
 ]
-<images/html.png, id=697, 335.2525pt x 321.2pt>
+<images/html.png, id=705, 335.2525pt x 321.2pt>
 File: images/html.png Graphic file (type png)
 <use images/html.png>
 Package pdftex.def Info: images/html.png  used on input line 284.
 (pdftex.def)             Requested size: 182.22046pt x 174.58247pt.
-<images/json.png, id=698, 1231.60126pt x 564.1075pt>
+<images/json.png, id=706, 1231.60126pt x 564.1075pt>
 File: images/json.png Graphic file (type png)
 <use images/json.png>
 Package pdftex.def Info: images/json.png  used on input line 284.
@@ -1260,17 +1260,17 @@ Package pdftex.def Info: images/json.png  used on input line 284.
  <./images/json.png (PNG copy)>] [25
 
 ]
-<images/reqres.png, id=842, 699.61375pt x 239.89626pt>
+<images/reqres.png, id=850, 699.61375pt x 239.89626pt>
 File: images/reqres.png Graphic file (type png)
 <use images/reqres.png>
 Package pdftex.def Info: images/reqres.png  used on input line 353.
 (pdftex.def)             Requested size: 342.30133pt x 117.37448pt.
-<images/httpmsgstructure.png, id=843, 1243.64626pt x 369.38pt>
+<images/httpmsgstructure.png, id=851, 1243.64626pt x 369.38pt>
 File: images/httpmsgstructure.png Graphic file (type png)
 <use images/httpmsgstructure.png>
 Package pdftex.def Info: images/httpmsgstructure.png  used on input line 353.
 (pdftex.def)             Requested size: 342.29791pt x 101.66718pt.
-<images/url.png, id=844, 709.65125pt x 168.63pt>
+<images/url.png, id=852, 709.65125pt x 168.63pt>
 File: images/url.png Graphic file (type png)
 <use images/url.png>
 Package pdftex.def Info: images/url.png  used on input line 353.
@@ -1675,24 +1675,59 @@ l.820     \end{frame}
 
 ] [58
 
-] [59
-
 ]
-<images/hashsalt.png, id=1809, 1339.0025pt x 674.52pt>
+<images/hashsalt.png, id=1789, 1339.0025pt x 674.52pt>
 File: images/hashsalt.png Graphic file (type png)
 <use images/hashsalt.png>
-Package pdftex.def Info: images/hashsalt.png  used on input line 942.
+Package pdftex.def Info: images/hashsalt.png  used on input line 927.
 (pdftex.def)             Requested size: 308.06625pt x 155.18779pt.
- [60
+ [59
+
+] [60
+
 
 ] [61
 
 
+ <./images/hashsalt.png>] [62
+
 ]
-[62
+<images/oauth.png, id=1908, 169.1118pt x 86.4831pt>
+File: images/oauth.png Graphic file (type png)
+<use images/oauth.png>
+Package pdftex.def Info: images/oauth.png  used on input line 975.
+(pdftex.def)             Requested size: 342.3308pt x 175.06656pt.
+ [63
+
+]
+Overfull \vbox (2.57614pt too high) detected at line 975
+ []
+
+[64
 
 
- <./images/hashsalt.png>]
+ <./images/oauth.png>] [65
+
+]
+<images/jwt.png, id=1996, 1204.5pt x 780.9175pt>
+File: images/jwt.png Graphic file (type png)
+<use images/jwt.png>
+Package pdftex.def Info: images/jwt.png  used on input line 1013.
+(pdftex.def)             Requested size: 308.0532pt x 199.72116pt.
+<images/jwt_enc.png, id=1997, 216.0873pt x 116.3547pt>
+File: images/jwt_enc.png Graphic file (type png)
+<use images/jwt_enc.png>
+Package pdftex.def Info: images/jwt_enc.png  used on input line 1013.
+(pdftex.def)             Requested size: 308.09575pt x 165.8977pt.
+ [66
+
+] [67
+
+
+ <./images/jwt.png (PNG copy)>] [68
+
+
+ <./images/jwt_enc.png>]
 \tf@nav=\write7
 \openout7 = `web.nav'.
 
@@ -1707,13 +1742,13 @@ Package pdftex.def Info: images/hashsalt.png  used on input line 942.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `web.out' has not changed.
-(rerunfilecheck)             Checksum: F5D88A11393E39B713DF3DE558DEFE51;2977.
+(rerunfilecheck)             Checksum: BA44C7DE59082601719A387C1D06B558;3439.
  ) 
 Here is how much of TeX's memory you used:
- 26982 strings out of 478238
- 503428 string characters out of 5850456
- 987431 words of memory out of 5000000
- 44467 multiletter control sequences out of 15000+600000
+ 27041 strings out of 478238
+ 504218 string characters out of 5850456
+ 988463 words of memory out of 5000000
+ 44506 multiletter control sequences out of 15000+600000
  486217 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,122p,407b,1638s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1728,10 +1763,10 @@ public/cm-super/sfss1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super
 /sfss1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb><
 /usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx1000.pfb></usr/share/texm
 f-dist/fonts/type1/public/cm-super/sfsx1095.pfb>
-Output written on web.pdf (62 pages, 851965 bytes).
+Output written on web.pdf (68 pages, 1057564 bytes).
 PDF statistics:
- 1987 PDF objects out of 2073 (max. 8388607)
- 1844 compressed objects within 19 object streams
- 159 named destinations out of 1000 (max. 500000)
- 318 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2177 PDF objects out of 2487 (max. 8388607)
+ 2021 compressed objects within 21 object streams
+ 176 named destinations out of 1000 (max. 500000)
+ 349 words of extra memory for PDF output out of 10000 (max. 10000000)
 

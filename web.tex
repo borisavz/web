@@ -891,22 +891,7 @@ protected void doFilterInternal(HttpServletRequest request,
         \end{itemize}
     \end{frame}
     
-    \begin{frame}{Основни ток}
-        \begin{itemize}
-            \item Креира се кориснички налог
-            \begin{itemize}
-                \item у зависности од врсте апликације, корисник се самостално региструје или добија готов налог
-            \end{itemize}
-            \item Корисник се пријављује у апликацију својим креденцијалима (корисничко име и лозинка) и добија access token
-            \begin{itemize}
-                \item access token садржи ID корисника као и његову улогу
-            \end{itemize}
-            \item Уз сваки захтев, корисник шаље свој access token
-            \begin{itemize}
-                \item уколико access token истекне, потребно је да се корисник поново пријави
-            \end{itemize}
-        \end{itemize}
-    \end{frame}
+    \subsection{Складиштење лозинки}
     
     \begin{frame}[allowframebreaks]{Складиштење лозинки}
         \begin{itemize}
@@ -924,7 +909,7 @@ protected void doFilterInternal(HttpServletRequest request,
             
             \item Најбоље је складиштење \textit{salted hash}-a лозинке \begin{math}salted\_hash = HashFunc(pass + salt)\end{math}
             \begin{itemize}
-                \item \textit{salt} је насумична вредност која се складишти уз лозинку
+                \item \begin{math}salt\end{math} је насумична вредност која се складишти уз лозинку
                 \item две исте лозинке ће због тога имати различиту \begin{math}salted\_hash\end{math} вредност, па је dictionary/brute force напад потребно извести одвојено за сваку лозинку
             \end{itemize}
             \item На жалост, и даље има доста апликација које лозинке складиште у отвореном тексту, што нас чини рањивим
@@ -939,6 +924,92 @@ protected void doFilterInternal(HttpServletRequest request,
                 \label{fig:hashsalt}
             \end{figure}
         \end{itemize}
+    \end{frame}
+    
+    \subsection{Имплементација механизма}
+    
+    \begin{frame}{Основни ток}
+        \begin{itemize}
+            \item Креира се кориснички налог
+            \begin{itemize}
+                \item у зависности од врсте апликације, корисник се самостално региструје или добија готов налог
+            \end{itemize}
+            \item Корисник се пријављује у апликацију својим креденцијалима (корисничко име и лозинка) и добија access token
+            \begin{itemize}
+                \item access token садржи ID корисника као и његову улогу
+            \end{itemize}
+            \item Уз сваки захтев, корисник шаље свој access token
+            \begin{itemize}
+                \item уколико access token истекне, потребно је да се корисник поново пријави
+            \end{itemize}
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}[allowframebreaks]{OAuth 2.0}
+        \begin{itemize}
+            \item Проблем: како да омогућимо да друга апликација буде клијент који извршава акције у име корисника?
+            \item Једноставно решење: апликацији дајемо креденцијале
+            \begin{itemize}
+                \item дељење креденцијала никада није добра идеја
+                \item апликација би имала сва корисничка права
+            \end{itemize}
+            \item Боље решење: апликацији дајемо \textit{access token}
+            \begin{itemize}
+                \item нема дељења креденцијала
+                \item токен има ограничена права приступа на неопходан подскуп \begin{math}token\_rights \subseteq user\_rights\end{math}
+            \end{itemize}
+            \item Ми ћемо да имплементирамо упроштену верзију која не подржава \textit{3rd party} клијенте
+            \begin{itemize}
+                \item \textbf{Resource Owner Password Credentials Grant} без \textit{refresh token}-a
+            \end{itemize}
+        \end{itemize}
+        
+        \framebreak
+        
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/oauth.png}
+            \caption{Resource Owner Password Credentials Grant}
+            \label{fig:oauth}
+        \end{figure}
+    \end{frame}
+    
+    \begin{frame}{Access token}
+        \begin{itemize}
+            \item Издаје га \textbf{Authorization Server}, шаљемо га у сваком захтеву ка \textbf{Resource Server}
+            \item Уколико је токен истекао, или је из другог разлога невалидан, \textbf{Resource Server} одбија наш захтев
+            \item Уколико је токен валидан, даља права приступа одређује логика апликације (подсетник: RBAC, ABAC)
+            \item Напомена: \textbf{Authorization Server} и \textbf{Resource Server} не морају да буду одвојене апликације, већ одвојени \textit{endpoint}-и у једној апликацији
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}[allowframebreaks]{JSON Web Token}
+        \begin{itemize}
+            \item Формат за представљање \textit{access token}-а
+            \item \textbf{Header}: Тип токена и алгоритам коришћен за дигитални потпис
+            \item \textbf{Payload}: ID корисника, улога, датум док којег важи токен, додатна поља
+            \item \textbf{Signature}: Дигитални потпис који апликација проверава како би утврдила да ли је она издала токен
+            \item Напомена: Base64 је алгоритам за кодирање, а не енкрипцију!
+            \begin{itemize}
+                \item односно, свако може да прочита наш токен, те он не би требало да садржи тајне информације
+            \end{itemize}
+        \end{itemize}
+        
+        \framebreak
+        
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.9\textwidth,height=0.9\textheight,keepaspectratio]{images/jwt.png}
+            \label{fig:jwt}
+        \end{figure}
+        
+        \framebreak
+        
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.9\textwidth,height=0.9\textheight,keepaspectratio]{images/jwt_enc.png}
+            \label{fig:jwt_enc}
+        \end{figure}
     \end{frame}
     
 \end{document}

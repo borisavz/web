@@ -158,16 +158,32 @@
 \headcommand {\beamer@framepages {57}{57}}
 \headcommand {\slideentry {6}{4}{2}{58/58}{ABAC}{0}}
 \headcommand {\beamer@framepages {58}{58}}
-\headcommand {\slideentry {6}{4}{3}{59/59}{ABAC}{0}}
+\headcommand {\beamer@subsectionpages {57}{58}}
+\headcommand {\beamer@subsectionentry {0}{6}{5}{59}{Складиштење лозинки}}
+\headcommand {\slideentry {6}{5}{1}{59/59}{Складиштење лозинки}{0}}
 \headcommand {\beamer@framepages {59}{59}}
-\headcommand {\slideentry {6}{4}{4}{60/60}{ABAC}{0}}
-\headcommand {\beamer@framepages {60}{60}}
-\headcommand {\slideentry {6}{4}{4}{60/61}{ABAC}{0}}
-\headcommand {\beamer@framepages {60}{61}}
-\headcommand {\slideentry {6}{4}{4}{60/62}{ABAC}{0}}
-\headcommand {\beamer@framepages {60}{62}}
-\headcommand {\beamer@partpages {1}{62}}
-\headcommand {\beamer@subsectionpages {57}{62}}
-\headcommand {\beamer@sectionpages {52}{62}}
-\headcommand {\beamer@documentpages {62}}
-\headcommand {\gdef \inserttotalframenumber {62}}
+\headcommand {\slideentry {6}{5}{1}{59/60}{Складиштење лозинки}{0}}
+\headcommand {\beamer@framepages {59}{60}}
+\headcommand {\slideentry {6}{5}{1}{59/61}{Складиштење лозинки}{0}}
+\headcommand {\beamer@framepages {59}{61}}
+\headcommand {\beamer@subsectionpages {59}{61}}
+\headcommand {\beamer@subsectionentry {0}{6}{6}{62}{Имплементација механизма}}
+\headcommand {\slideentry {6}{6}{1}{62/62}{Имплементација механизма}{0}}
+\headcommand {\beamer@framepages {62}{62}}
+\headcommand {\slideentry {6}{6}{2}{63/63}{Имплементација механизма}{0}}
+\headcommand {\beamer@framepages {63}{63}}
+\headcommand {\slideentry {6}{6}{2}{63/64}{Имплементација механизма}{0}}
+\headcommand {\beamer@framepages {63}{64}}
+\headcommand {\slideentry {6}{6}{3}{65/65}{Имплементација механизма}{0}}
+\headcommand {\beamer@framepages {65}{65}}
+\headcommand {\slideentry {6}{6}{4}{66/66}{Имплементација механизма}{0}}
+\headcommand {\beamer@framepages {66}{66}}
+\headcommand {\slideentry {6}{6}{4}{66/67}{Имплементација механизма}{0}}
+\headcommand {\beamer@framepages {66}{67}}
+\headcommand {\slideentry {6}{6}{4}{66/68}{Имплементација механизма}{0}}
+\headcommand {\beamer@framepages {66}{68}}
+\headcommand {\beamer@partpages {1}{68}}
+\headcommand {\beamer@subsectionpages {62}{68}}
+\headcommand {\beamer@sectionpages {52}{68}}
+\headcommand {\beamer@documentpages {68}}
+\headcommand {\gdef \inserttotalframenumber {68}}
