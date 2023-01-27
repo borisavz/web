@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.1.25)  27 JAN 2023 12:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.1.25)  27 JAN 2023 13:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1675,7 +1675,24 @@ l.820     \end{frame}
 
 ] [58
 
+] [59
+
 ]
+<images/hashsalt.png, id=1809, 1339.0025pt x 674.52pt>
+File: images/hashsalt.png Graphic file (type png)
+<use images/hashsalt.png>
+Package pdftex.def Info: images/hashsalt.png  used on input line 930.
+(pdftex.def)             Requested size: 308.06625pt x 155.18779pt.
+ [60
+
+] [61
+
+
+]
+[62
+
+
+ <./images/hashsalt.png>]
 \tf@nav=\write7
 \openout7 = `web.nav'.
 
@@ -1693,26 +1710,28 @@ Package rerunfilecheck Info: File `web.out' has not changed.
 (rerunfilecheck)             Checksum: F5D88A11393E39B713DF3DE558DEFE51;2977.
  ) 
 Here is how much of TeX's memory you used:
- 26946 strings out of 478238
- 502855 string characters out of 5850456
- 987246 words of memory out of 5000000
- 44444 multiletter control sequences out of 15000+600000
- 482812 words of font info for 64 fonts, out of 8000000 for 9000
+ 26982 strings out of 478238
+ 503428 string characters out of 5850456
+ 987431 words of memory out of 5000000
+ 44467 multiletter control sequences out of 15000+600000
+ 486217 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,122p,407b,1638s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/
-texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</usr/share/texmf-dist/fon
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}{/usr/share/
+texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss0600.pfb></usr
-/share/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/share/texmf-di
-st/fonts/type1/public/cm-super/sfss1095.pfb></usr/share/texmf-dist/fonts/type1/
-public/cm-super/sfss1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super
-/sfsx1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb>
-Output written on web.pdf (58 pages, 791815 bytes).
+msy10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsi1000.pfb></usr
+/share/texmf-dist/fonts/type1/public/cm-super/sfsi1095.pfb></usr/share/texmf-di
+st/fonts/type1/public/cm-super/sfss0600.pfb></usr/share/texmf-dist/fonts/type1/
+public/cm-super/sfss1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super
+/sfss1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb><
+/usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx1000.pfb></usr/share/texm
+f-dist/fonts/type1/public/cm-super/sfsx1095.pfb>
+Output written on web.pdf (62 pages, 851265 bytes).
 PDF statistics:
- 1858 PDF objects out of 2073 (max. 8388607)
- 1726 compressed objects within 18 object streams
- 150 named destinations out of 1000 (max. 500000)
- 313 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1987 PDF objects out of 2073 (max. 8388607)
+ 1844 compressed objects within 19 object streams
+ 159 named destinations out of 1000 (max. 500000)
+ 318 words of extra memory for PDF output out of 10000 (max. 10000000)
 

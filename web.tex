@@ -897,9 +897,35 @@ protected void doFilterInternal(HttpServletRequest request,
         \end{itemize}
     \end{frame}
     
-    \begin{frame}{Складиштење лозинки}
+    \begin{frame}[allowframebreaks]{Складиштење лозинки}
         \begin{itemize}
-            \item 
+            \item Најједноставнији начин је складиштење лозинке у отвореном тексту
+            \begin{itemize}
+                \item уколико нападач дође у посед лозинки, може да се несметано пријави у нашу, а вероватно и остале апликације
+            \end{itemize}
+            \item Нешто боље је складиштење \textit{hash}-a лозинке \begin{math}hash = HashFunc(pass)\end{math}
+            \begin{itemize}
+                \item исте лозинке имају исти \textit{hash} (\begin{math}HashFunc(pass)\end{math} је детерминистичка функција)
+                \item могуће је извести dictionary/brute force напад и тиме компоромитовати исте лозинке
+            \end{itemize}
+            
+            \framebreak
+            
+            \item Најбоље је складиштење \textit{salted hash}-a лозинке \begin{math}salted\_hash = HashFunc(pass + salt)\end{math}
+            \begin{itemize}
+                \item \textit{salt} је насумична вредност која се складишти уз лозинку
+                \item две исте лозинке ће због тога имати различиту \begin{math}salted\_hash\end{math} вредност, па је dictionary/brute force напад потребно извести одвојено за сваку лозинку
+            \end{itemize}
+            \item На жалост, и даље има доста апликација које лозинке складиште у отвореном тексту, што нас чини рањивим
+            
+            \framebreak
+        
+            \begin{figure}
+                \centering
+                \includegraphics[width=0.9\textwidth,height=\textheight,keepaspectratio]{images/hashsalt.png}
+                \caption{шематски приказ \textit{salted hash}-a}
+                \label{fig:hashsalt}
+            \end{figure}
         \end{itemize}
     \end{frame}
     
