@@ -726,7 +726,7 @@ public class CommentDTO {
         \end{itemize}
     \end{frame}
     
-        \begin{frame}[fragile]{Пример имплементације: Go/Gorilla Mux}
+    \begin{frame}[fragile]{Пример имплементације: Go/Gorilla Mux}
         \begin{adjustbox}{width=\textwidth,height=0.7\textheight,keepaspectratio}
             \begin{lstlisting}[language=go]
 func ExtractJWTUserMiddleware(next http.Handler) http.Handler {
@@ -793,6 +793,114 @@ protected void doFilterInternal(HttpServletRequest request,
 }
             \end{lstlisting}
         \end{adjustbox}
+    \end{frame}
+    
+    \section{Аутентификација и ауторизација}
+    \subsection{Индирекција}
+    
+    \begin{frame}[allowframebreaks]{Индирекција}
+        \begin{itemize}
+            \item Било који проблем у рачунарству може бити решен још једним нивоом индирекције, осим наравно проблема превише индирекција (David J. Wheeler)
+            \item Индирекција омогућава имплементацију контроле приступа
+            \item Извршавање \textbf{акције} мора да одобри \textbf{посредник} који дефинише правила приступа
+            \item Механизам присутан на свим нивоима апстракције
+            \begin{itemize}
+                \item енкапсулација у ООП, x86 protection rings, системски позиви, изолација процеса, \textbf{бизнис логика}
+            \end{itemize}
+        \end{itemize}
+        
+        \framebreak
+        
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/udp_enc.png}
+            \caption{шематски приказ индирекције}
+            \label{fig:udp_enc}
+        \end{figure}
+    \end{frame}
+    
+    \subsection{Основни појмови}
+    
+    \begin{frame}{Основни појмови}
+        \begin{itemize}
+            \item \textbf{Идентификација}: процес приписивања идентитета човеку или другом рачунару
+            \begin{itemize}
+                \item регистрација корисничког налога
+            \end{itemize}
+            \item \textbf{Аутентификација}: процес провере идентитета
+            \begin{itemize}
+                \item пријављивање на кориснички налог
+            \end{itemize}
+            \item \textbf{Ауторизација}: утврђивање права која корисник има над ресурсима у систему
+            \begin{itemize}
+                \item провере права приступа у апликацији (middleware/controller/service)
+            \end{itemize}
+        \end{itemize}
+    \end{frame}
+    
+    \subsection{RBAC}
+    
+    \begin{frame}{Role Based Access Control: концепт}
+        \begin{itemize}
+            \item Корисник има улогу, улога има дозволе
+            \begin{itemize}
+                \item улога одговара радном месту у фирми или типу налога (обичан/администраторски)
+                \item дозвола одговара акцији у систему
+            \end{itemize}
+            \item Улога додељена кориснику се (релативно) ретко мења
+            \begin{itemize}
+                \item промена радног места
+            \end{itemize}
+            \item Кроз време, могућа је промена дозвола додељених улогама
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{Role Based Access Control: имплементација}
+        \begin{itemize}
+            \item Уз корисника, у бази података чувамо његову улогу
+            \item Дозволе се најчешће не чувају, већ се провере имплементирају ручно у middleware/controller
+            \item Улога се чува у \textbf{access token}
+        \end{itemize}
+    \end{frame}
+    
+    \subsection{ABAC}
+    
+    \begin{frame}{Attribute Based Access Control: концепт}
+        \begin{itemize}
+            \item RBAC је погодан за статичке дозволе, али је веома непогодан за динамичке
+            \begin{itemize}
+                \item пример: само члан сме да приступи пројекту, преузимање видео игре је дозвољено старијима од 16 година
+            \end{itemize}
+            \item Функција \begin{math}f(Attr) \rightarrow Bool\end{math} одређује да ли корисник има дозволу да обави акцију
+            \item \begin{math}Attr\end{math} се састоји од тренутног стања система
+            \begin{itemize}
+                \item што значи да \begin{math}f(Attr)\end{math} није детерминистичка функција!
+            \end{itemize}
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{Attribute Based Access Control: имплементација}
+        \begin{itemize}
+            \item Уз записе у бази чувамо атрибуте који су потребни за одређивање права приступа
+            \item Атрибути могу да представљају везу између корисника и заштићеног ресурса (пример: листа чланова пројекта) или да буду везани директо за заштићени ресурс (пример: старост потребна за преузимање игре)
+            \item Провере се обављају у сервисном слоју
+            \begin{itemize}
+                \item уколико се \begin{math}f(Attr)\end{math} евалуира у \begin{math}False\end{math}, враћамо грешку \textbf{403 Forbidden}
+            \end{itemize}
+            \item Обично захтева додатни упит над базом података
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{Основни ток}
+        \begin{itemize}
+            \item 
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{Складиштење лозинки}
+        \begin{itemize}
+            \item 
+        \end{itemize}
     \end{frame}
     
 \end{document}
