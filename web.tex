@@ -893,7 +893,18 @@ protected void doFilterInternal(HttpServletRequest request,
     
     \begin{frame}{Основни ток}
         \begin{itemize}
-            \item 
+            \item Креира се кориснички налог
+            \begin{itemize}
+                \item у зависности од врсте апликације, корисник се самостално региструје или добија готов налог
+            \end{itemize}
+            \item Корисник се пријављује у апликацију својим креденцијалима (корисничко име и лозинка) и добија access token
+            \begin{itemize}
+                \item access token садржи ID корисника као и његову улогу
+            \end{itemize}
+            \item Уз сваки захтев, корисник шаље свој access token
+            \begin{itemize}
+                \item уколико access token истекне, потребно је да се корисник поново пријави
+            \end{itemize}
         \end{itemize}
     \end{frame}
     
@@ -917,6 +928,7 @@ protected void doFilterInternal(HttpServletRequest request,
                 \item две исте лозинке ће због тога имати различиту \begin{math}salted\_hash\end{math} вредност, па је dictionary/brute force напад потребно извести одвојено за сваку лозинку
             \end{itemize}
             \item На жалост, и даље има доста апликација које лозинке складиште у отвореном тексту, што нас чини рањивим
+            \item Напомена: лозинке не смеју да се шаљу уколико веза није безбедна (HTTPS), јер у супротном могу да буду украдене без обзира на безбедно складиштење!
             
             \framebreak
         
