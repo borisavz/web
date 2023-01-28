@@ -6,17 +6,18 @@
 \beamer@sectionintoc {2}{Клијент-сервер архитектура}{16}{0}{2}
 \beamer@sectionintoc {3}{Еволуција веб апликација}{21}{0}{3}
 \beamer@sectionintoc {4}{HTTP протокол}{25}{0}{4}
-\beamer@sectionintoc {5}{Архитектура веб апликације}{32}{0}{5}
-\beamer@subsectionintoc {5}{1}{Controller}{34}{0}{5}
-\beamer@subsectionintoc {5}{2}{Service}{37}{0}{5}
-\beamer@subsectionintoc {5}{3}{Repository}{40}{0}{5}
-\beamer@subsectionintoc {5}{4}{Entity}{43}{0}{5}
-\beamer@subsectionintoc {5}{5}{Data Transfer Object}{46}{0}{5}
-\beamer@subsectionintoc {5}{6}{Middleware}{49}{0}{5}
-\beamer@sectionintoc {6}{Аутентификација и ауторизација}{52}{0}{6}
-\beamer@subsectionintoc {6}{1}{Индирекција}{52}{0}{6}
-\beamer@subsectionintoc {6}{2}{Основни појмови}{54}{0}{6}
-\beamer@subsectionintoc {6}{3}{RBAC}{55}{0}{6}
-\beamer@subsectionintoc {6}{4}{ABAC}{57}{0}{6}
-\beamer@subsectionintoc {6}{5}{Складиштење лозинки}{59}{0}{6}
-\beamer@subsectionintoc {6}{6}{Имплементација механизма}{62}{0}{6}
+\beamer@sectionintoc {5}{Рад са базом података}{32}{0}{5}
+\beamer@sectionintoc {6}{Архитектура веб апликације}{49}{0}{6}
+\beamer@subsectionintoc {6}{1}{Controller}{51}{0}{6}
+\beamer@subsectionintoc {6}{2}{Service}{54}{0}{6}
+\beamer@subsectionintoc {6}{3}{Repository}{57}{0}{6}
+\beamer@subsectionintoc {6}{4}{Entity}{60}{0}{6}
+\beamer@subsectionintoc {6}{5}{Data Transfer Object}{63}{0}{6}
+\beamer@subsectionintoc {6}{6}{Middleware}{66}{0}{6}
+\beamer@sectionintoc {7}{Аутентификација и ауторизација}{69}{0}{7}
+\beamer@subsectionintoc {7}{1}{Индирекција}{69}{0}{7}
+\beamer@subsectionintoc {7}{2}{Основни појмови}{71}{0}{7}
+\beamer@subsectionintoc {7}{3}{RBAC}{72}{0}{7}
+\beamer@subsectionintoc {7}{4}{ABAC}{74}{0}{7}
+\beamer@subsectionintoc {7}{5}{Складиштење лозинки}{76}{0}{7}
+\beamer@subsectionintoc {7}{6}{Имплементација механизма}{79}{0}{7}

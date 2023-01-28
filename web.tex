@@ -386,6 +386,177 @@
             \end{itemize}
         \end{itemize}
     \end{frame}
+    
+    \section{Рад са базом података}
+    
+    \begin{frame}{База података}
+        \begin{itemize}
+            \item База података нам омогућује централизовање логике за чување, приступ и измену података, како би се ефикасније посветили развоју апликативне логике
+            \item Грубо гледано, база података је софтвер за читање фајлова
+            \begin{itemize}
+                \item ...али тај формат је комплекснији од CSV, обично варијације B-Tree или LSM Tree
+            \end{itemize}
+            \item Интеракција се обавља кроз \textbf{упитни језик}
+            \item Могућа интеракција кроз алате за администрацију (пример: DBeaver) или кроз библиотеке жељеног програмског језика
+            \item Аутентификација и ауторизација је подржана
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{Модел података}
+        \begin{itemize}
+            \item 
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{Упитни језик}
+        \begin{itemize}
+            \item 
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{Трансакције}
+        \begin{itemize}
+            \item 
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}[allowframebreaks]{Нормализација и денормализација}
+        \begin{itemize}
+            \item 
+        \end{itemize}
+        
+        \framebreak
+        
+        \begin{figure}
+            \centering
+            %\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/orm.png}
+            \caption{нормализован модел података}
+            \label{fig:orm}
+        \end{figure}
+        
+        \framebreak
+        
+        \begin{figure}
+            \centering
+            %\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/orm.png}
+            \caption{денормализован модел података}
+            \label{fig:orm}
+        \end{figure}
+    \end{frame}
+    
+    \begin{frame}[allowframebreaks]{Injection напади}
+        \begin{itemize}
+            \item Улаз добијен од корисника је ван наше контроле и зато потенцијална опасност!
+            \item До овог проблема долази уколико у упит наивно додамо параметре кроз конкатенацију стрингова
+            \item То омогућава нападачу да, уз познавање коришћене базе података, упит измени и тако изврши произвољан код
+            \begin{itemize}
+                \item обрише табелу/базу података, заобиђе правила филтрирања, добави целу табелу...
+            \end{itemize}
+            \item Решење: коришћење искључиво параметризованих упита, никада конкатенације стрингова
+        \end{itemize}
+        
+        \framebreak
+        
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth,height=0.7\textheight,keepaspectratio]{images/sqlinjection.png}
+            \label{fig:sqlinjection}
+        \end{figure}
+    \end{frame}
+    
+    \begin{frame}[allowframebreaks]{Објектно-релационо мапирање}
+        \begin{itemize}
+            \item Писање упита за релативно једноставне измене или добављање везаних ентитета може да буде напорно
+            \item Идеја: интеракција са објектним моделом у жељеном програмском језику се у позадини конвертује у одговарајуће упите
+            \item Имплементација помоћу \textbf{proxy pattern}-a
+            \begin{itemize}
+                \item наше класе анотирамо како би их ORM библиотека препознала, добијамо динамички креиран \textbf{proxy} објекат
+                \item \textbf{getter} учитава везане ентитете, уколико нису учитани
+            \end{itemize}
+            \item Чест шаблон: добављање преко упита, чување измена преко ORM
+            \item Упозорење: неопрезно \textbf{eager} добаваљање везаних ентитета може да озбиљно наруши перформансе и стабилност!          
+        \end{itemize}
+        
+        \framebreak
+        
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth,height=0.7\textheight,keepaspectratio]{images/proxy.png}
+            \caption{Proxy pattern}
+            \label{fig:proxy}
+        \end{figure}
+        
+        \framebreak
+        
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/orm.png}
+            \label{fig:orm}
+        \end{figure}
+    \end{frame}
+    
+    \begin{frame}[allowframebreaks]{Connection pooling}
+        \begin{itemize}
+            \item За извршавање упита над базом, неопходна је комуникација кроз успостављену конекцију
+            \item Једноставан приступ би био да успоставимо концекцију, извршимо упит и затим затворимо конекцију
+            \item Како упостављање конекције траје одређено време, а често извршавамо више упита у релативно блиском временском периоду, ово видно обара перформансе
+            \item Решење: кеширање концекција
+            \begin{itemize}
+                \item конекцију никада не креирамо директно, већ је добављамо из pool-a
+                \item конекцију остављамо отворену одређени временски период
+                \item pool чува више конекција због паралелног опслуживања клијената
+            \end{itemize} 
+        \end{itemize}
+        
+        \framebreak
+        
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/connpool.png}
+            \label{fig:connpool}
+        \end{figure}
+    \end{frame}
+    
+    \begin{frame}[allowframebreaks]{Миграција базе података}
+        \begin{itemize}
+            \item Кроз време, наша апликација доживљава измене, а оне узрокују промену модела података
+            \begin{itemize}
+                \item додавање и уклањање табела и поља, нормализација/денормализација модела података
+            \end{itemize}
+            \item Једини начин да ово извршимо је покрентањем \textbf{скрипти за миграцију}
+            \item Ово је могуће аутоматизовати тако да се скрипте изврше аутоматски при покретању нове верзије апликације
+            \begin{itemize}
+                \item додатно: верзионирање измена, upgrade/downgrade модела података
+            \end{itemize}
+            \item Алати: Java/Liquibase, Go/migrate
+        \end{itemize}
+        
+        \framebreak
+        
+        \begin{itemize}
+            \item Математички посматрано, миграција представља пресликавање између алгебарских структура
+            \begin{itemize}
+                \item старе и нове верзије базе података
+            \end{itemize}
+            \item Ово пресликавање не мора да буде инјективно!
+            \begin{itemize}
+                \item односно, може доћи до губитка података, због чега не постоји инверзно пресликавање које би вратило претходну верзију
+            \end{itemize}
+            \item Пример: бришемо табеле, поља, или записе
+            \item Због тога је неопходно са великом пажњом писати и тестирати скрипте за миграцију
+            \begin{itemize}
+                \item потенцијално: прављење резервних копија уколико су измене ризичне
+            \end{itemize}
+        \end{itemize}
+        
+        \framebreak
+        
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/liquibase.png}
+            \label{fig:liquibase}
+        \end{figure}
+    \end{frame}
 
     \section{Архитектура веб апликације}
     
