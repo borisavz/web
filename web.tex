@@ -404,25 +404,92 @@
     
     \begin{frame}{Модел података}
         \begin{itemize}
-            \item 
+            \item Модел података представља ентитете из реалног система и везе међу њима
+            \item Модел је увек апроксимација реалног система!
+            \begin{itemize}
+                \item због тога бирамо онај модел података који најбоље одговара нашем систему
+            \end{itemize}
+            \item Данас актуелни: релациони, граф, key-value, document, time series, wide column
+            \item У већини случајева, релациони модел је погодан
+            \item Примери изузетака:
+            \begin{itemize}
+                \item друштвене мреже је најприродније представити као граф
+                \item чување фајла/низа бајтова је најједноставније у key-value
+            \end{itemize}
         \end{itemize}
     \end{frame}
     
     \begin{frame}{Упитни језик}
         \begin{itemize}
-            \item 
+            \item Упитни језици су уско везани за математичке формализме иза модела података
+            \begin{itemize}
+                \item SQL: релациона алгебра, Neo4J Cypher: обилазак графа
+            \end{itemize}
+            \item Спадају у групу \textbf{језика специфичних за домен (Domain Specific Languages, DSL)}
+            \begin{itemize}
+                \item замисао: језиком описујемо коју акцију желимо, док извршавање конкретних корака препуштамо систему
+                \item кораци потребни за извршавање упита се називају \textbf{query plan}
+            \end{itemize}
+            \item \textbf{Data Definition Language}: креирање и измена шеме базе података, креирање индекса
+            \item \textbf{Data Manipulation Language}: Create, Read, Update, Delete (CRUD) операције
         \end{itemize}
     \end{frame}
     
-    \begin{frame}{Трансакције}
+    \begin{frame}[allowframebreaks]{Трансакције}
         \begin{itemize}
-            \item 
+            \item Чест случај је да извршавање једне корисничке акције може да захтева измене над више записа, који су често у различитим табелама
+            \item Проблем: грешка у сред акције може да податке остави у неконзистентном стању
+            \item Решење: свака измена података се извршава у трансакцији
+            \begin{itemize}
+                \item \textbf{commit}: трајно сачувати измене уколико су све успешно извршене
+                \item \textbf{rollback}: трајно одбацити све измене први првој неуспешној 
+            \end{itemize}
         \end{itemize}
+        
+        \framebreak
+        
+        \begin{itemize}
+            \item Трансакције морају да задовољавају \textbf{ACID} скуп особина:
+            \begin{itemize}
+                \item \textbf{Atomicity}:
+                \item \textbf{Consistency}:
+                \item \textbf{Isolation}:
+                \item \textbf{Durability}:
+            \end{itemize}
+            \item Уочено је да комлетна изолација видно обара перформансе, те је ниво изолације могуће подесити на нивоу трансакције
+        \end{itemize}
+        
+        \framebreak
+        
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{images/transaction.png}
+            \label{fig:transaction}
+        \end{figure}
     \end{frame}
     
     \begin{frame}[allowframebreaks]{Нормализација и денормализација}
         \begin{itemize}
-            \item 
+            %\item Нормализација је појам који потиче од релационих база
+            \item Замисао нормализације је спречавање аномалија до којих долази приликом измене дуплираних података
+            \begin{itemize}
+                \item кажемо да је база података нормализована уколико задовољава математичку дефиницију треће нормалне форме
+            \end{itemize} 
+            \item Замисао моделовања релационе базе података је да уколико добро измоделујемо објекте у систему, можемо извршити било који упит над њима
+            \item Цена овог приступа је да поједини упити могу бити изузетно скупи (превише JOIN операција)
+            \item У денормализованом моделу није потребно извршавање JOIN
+        \end{itemize}
+        
+        \framebreak
+        
+        \begin{itemize}
+            \item Жртвујемо нешто спорији упис ради далеко бржег читања
+            \item Класичан пример нерешив у нормализованом моделу података: feed на друштвеним мрежама
+            \begin{itemize}
+                \item замислите три-четири JOIN-a над гигантским скуповима
+            \end{itemize}
+            \item Моделовање већине NoSQL база података захтева познавање упита унапред, што их чини непогодним за ране фазе развоја
+            \item Добра пракса: започети са нормализованим моделом података, након уочавања уских грла и честих упита, денормализовати модел података по потреби
         \end{itemize}
         
         \framebreak
