@@ -23,6 +23,7 @@
 \beamer@slide {fig:url}{52}
 \beamer@slide {fig:udp_enc}{72}
 \beamer@slide {fig:hashsalt}{79}
+\beamer@slide {fig:oauth_overview}{83}
 \beamer@slide {fig:oauth}{83}
-\beamer@slide {fig:jwt}{86}
-\beamer@slide {fig:jwt_enc}{86}
+\beamer@slide {fig:jwt}{87}
+\beamer@slide {fig:jwt_enc}{87}

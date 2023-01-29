@@ -444,6 +444,11 @@
                 \item \textbf{commit}: трајно сачувати измене уколико су све успешно извршене
                 \item \textbf{rollback}: трајно одбацити све измене први првој неуспешној 
             \end{itemize}
+            \item Трансакција пресликава једно валидно стање у друго валидно стање
+            \begin{itemize}
+                \item дозвољена стања се називају инваријанте
+                \item дефинисанa су ограничењима (PRIMARY KEY, FOREGIN KEY, CHECK)
+            \end{itemize}
         \end{itemize}
         
         \framebreak
@@ -451,12 +456,16 @@
         \begin{itemize}
             \item Трансакције морају да задовољавају \textbf{ACID} скуп особина:
             \begin{itemize}
-                \item \textbf{Atomicity}:
-                \item \textbf{Consistency}:
-                \item \textbf{Isolation}:
-                \item \textbf{Durability}:
+                \item \textbf{Atomicity}: извршавају се све акције, или ниједна
+                \item \textbf{Consistency}: измене морају да произведу валидно стање
+                \item \textbf{Isolation}: трансакција не мора да буде свесна других конкурентних трансакција
+                \item \textbf{Durability}: измене остају трајно сачуванe уколико је успешан резулат потврђен
             \end{itemize}
             \item Уочено је да комлетна изолација видно обара перформансе, те је ниво изолације могуће подесити на нивоу трансакције
+            \begin{itemize}
+                \item потенцијално уноси аномалије при читању
+                \item нивои изолације нису адекватно стандардизовани, неопходно је консултовати се са документацијом!
+            \end{itemize}
         \end{itemize}
         
         \framebreak
@@ -1201,6 +1210,14 @@ protected void doFilterInternal(HttpServletRequest request,
                 \item \textbf{Resource Owner Password Credentials Grant} без \textit{refresh token}-a
             \end{itemize}
         \end{itemize}
+        
+        \framebreak
+        
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{images/oauth_overview.png}
+            \label{fig:oauth_overview}
+        \end{figure}
         
         \framebreak
         
