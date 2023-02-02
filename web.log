@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.1.25)  2 FEB 2023 20:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.1.25)  2 FEB 2023 20:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -991,11 +991,7 @@ LaTeX Font Info:    Trying to load font information for T2A+cmss on input line
 
 (/usr/share/texmf-dist/tex/latex/cyrillic/t2acmss.fd
 File: t2acmss.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-)
-
-LaTeX Warning: Label `fig:url' multiply defined.
-
-)
+))
 \openout1 = `web.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -1019,7 +1015,8 @@ LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 18.
 LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 1
 8.
- (/usr/share/texmf-dist/tex/latex/cyrillic/t2acmr.fd
+
+(/usr/share/texmf-dist/tex/latex/cyrillic/t2acmr.fd
 File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
 LaTeX Font Info:    ... okay on input line 18.
@@ -1781,16 +1778,13 @@ Package pdftex.def Info: images/jwt_enc.png  used on input line 1256.
 \openout9 = `web.snm'.
 
  (./web.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `web.out' has not changed.
 (rerunfilecheck)             Checksum: 6483D524899A7902256879104AF72D94;3483.
  ) 
 Here is how much of TeX's memory you used:
  27055 strings out of 478238
  502779 string characters out of 5850456
- 987544 words of memory out of 5000000
+ 987551 words of memory out of 5000000
  44458 multiletter control sequences out of 15000+600000
  486524 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
