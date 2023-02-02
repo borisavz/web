@@ -1,5 +1,5 @@
-\documentclass{beamer}
-%\documentclass[aspectratio=169]{beamer}
+%\documentclass{beamer}
+\documentclass[aspectratio=169]{beamer}
 
 \usepackage[serbianc]{babel}
 \usepackage{graphicx}
@@ -10,10 +10,10 @@
 \hypersetup{unicode}
 \makeindex
 \usefonttheme{professionalfonts}
-\usetheme{CambridgeUS}
+\usetheme{Hannover}
 
 \title{Основе веб програмирања}
-\author{Борисав Живановић (borisavz)}
+\author{Борисав Живановић}
 
 \begin{document}
 
@@ -33,8 +33,8 @@
         \end{enumerate}
     \end{frame}
 
-    \section{Основни појмови мрежног програмирања}
-    \subsection{Packet switching}
+    \section{Основе мрежног програмирања}
+    \subsection[]{Packet switching}
 
     \begin{frame}[allowframebreaks]{Packet switching}
         \begin{itemize}
@@ -62,7 +62,7 @@
         \end{figure}
     \end{frame}
 
-    \subsection{IP, DNS}
+    \subsection[]{IP, DNS}
 
     \begin{frame}[allowframebreaks]{Internet Protocol}
         \begin{itemize}
@@ -112,7 +112,7 @@
         \end{figure}
     \end{frame}
     
-    \subsection{TCP, UDP}
+    \subsection[]{TCP, UDP}
     
     \begin{frame}[allowframebreaks]{Transmission Control Protocol}
         \begin{itemize}
@@ -655,7 +655,7 @@
         \end{figure}
     \end{frame}
     
-    \subsection{Controller}
+    \subsection[]{Controller}
     
     \begin{frame}{Controller}
         \begin{itemize}
@@ -703,7 +703,7 @@ public long addPostComment(
         \end{adjustbox}
     \end{frame}
     
-    \subsection{Service}
+    \subsection[]{Service}
     
     \begin{frame}{Service}
         \begin{itemize}
@@ -781,7 +781,7 @@ public void downvotePost(long postId) {
         \end{adjustbox}
     \end{frame}
     
-    \subsection{Repository}
+    \subsection[]{Repository}
     
     \begin{frame}{Repository}
         \begin{itemize}
@@ -840,7 +840,7 @@ void deletePostReactionByUser(long userId, long postId);
         \end{adjustbox}
     \end{frame}
     
-    \subsection{Entity}
+    \subsection[]{Entity}
     
     \begin{frame}{Entity}
         \begin{itemize}
@@ -906,7 +906,7 @@ public class Post {
         \end{adjustbox}
     \end{frame}
     
-    \subsection{Data Transfer Object}
+    \subsection[]{Data Transfer Object}
     
     \begin{frame}{Data Transfer Object (DTO)}
         \begin{itemize}
@@ -957,7 +957,7 @@ public class CommentDTO {
         \end{adjustbox}
     \end{frame}
     
-    \subsection{Middleware}
+    \subsection[]{Middleware}
     
     \begin{frame}{Middleware}
         \begin{itemize}
@@ -1042,8 +1042,8 @@ protected void doFilterInternal(HttpServletRequest request,
         \end{adjustbox}
     \end{frame}
     
-    \section{Аутентификација и ауторизација}
-    \subsection{Индирекција}
+    \section{Основе безбедности}
+    \subsection[]{Индирекција}
     
     \begin{frame}[allowframebreaks]{Индирекција}
         \begin{itemize}
@@ -1066,7 +1066,7 @@ protected void doFilterInternal(HttpServletRequest request,
         \end{figure}
     \end{frame}
     
-    \subsection{Основни појмови}
+    \subsection[]{Основни појмови}
     
     \begin{frame}{Основни појмови}
         \begin{itemize}
@@ -1085,7 +1085,7 @@ protected void doFilterInternal(HttpServletRequest request,
         \end{itemize}
     \end{frame}
     
-    \subsection{RBAC}
+    \subsection[]{RBAC}
     
     \begin{frame}{Role Based Access Control: концепт}
         \begin{itemize}
@@ -1110,7 +1110,7 @@ protected void doFilterInternal(HttpServletRequest request,
         \end{itemize}
     \end{frame}
     
-    \subsection{ABAC}
+    \subsection[]{ABAC}
     
     \begin{frame}{Attribute Based Access Control: концепт}
         \begin{itemize}
@@ -1138,7 +1138,7 @@ protected void doFilterInternal(HttpServletRequest request,
         \end{itemize}
     \end{frame}
     
-    \subsection{Складиштење лозинки}
+    \subsection[]{Складиштење лозинки}
     
     \begin{frame}[allowframebreaks]{Складиштење лозинки}
         \begin{itemize}
@@ -1173,7 +1173,7 @@ protected void doFilterInternal(HttpServletRequest request,
         \end{itemize}
     \end{frame}
     
-    \subsection{Имплементација механизма}
+    \subsection[]{Имплементација механизма}
     
     \begin{frame}{Основни ток}
         \begin{itemize}

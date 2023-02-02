@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.1.25)  29 JAN 2023 14:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.1.25)  2 FEB 2023 19:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -974,10 +974,13 @@ Package hyperref Info: Option `unicode' set `true' on input line 10.
 
 Writing index file web.idx
 (/usr/share/texmf-dist/tex/latex/beamer/beamerfontthemeprofessionalfonts.sty)
-(/usr/share/texmf-dist/tex/latex/beamer/beamerthemeCambridgeUS.sty
-(/usr/share/texmf-dist/tex/latex/beamer/beamerinnerthemerounded.sty)
-(/usr/share/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.sty)
-(/usr/share/texmf-dist/tex/latex/beamer/beamercolorthemebeaver.sty))
+(/usr/share/texmf-dist/tex/latex/beamer/beamerthemeHannover.sty
+(/usr/share/texmf-dist/tex/latex/beamer/beamerouterthemesidebar.sty
+\beamer@sidebarwidth=\dimen311
+\beamer@headheight=\dimen312
+)
+(/usr/share/texmf-dist/tex/latex/beamer/beamercolorthemeseahorse.sty)
+(/usr/share/texmf-dist/tex/latex/beamer/beamerinnerthemecircles.sty))
 (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-04-14 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count347
@@ -1038,14 +1041,14 @@ LaTeX Font Info:    ... okay on input line 18.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includehead includefoot 
-* h-part:(L,W,R)=(10.95003pt, 342.2953pt, 10.95003pt)
-* v-part:(T,H,B)=(0.0pt, 273.14662pt, 0.0pt)
-* \paperwidth=364.19536pt
-* \paperheight=273.14662pt
-* \textwidth=342.2953pt
-* \textheight=244.6939pt
-* \oddsidemargin=-61.31996pt
-* \evensidemargin=-61.31996pt
+* h-part:(L,W,R)=(59.22636pt, 381.79135pt, 14.22636pt)
+* v-part:(T,H,B)=(0.0pt, 256.0748pt, 0.0pt)
+* \paperwidth=455.24408pt
+* \paperheight=256.0748pt
+* \textwidth=381.79135pt
+* \textheight=227.62207pt
+* \oddsidemargin=-13.04362pt
+* \evensidemargin=-13.04362pt
 * \topmargin=-72.26999pt
 * \headheight=14.22636pt
 * \headsep=0.0pt
@@ -1067,13 +1070,13 @@ LaTeX Font Info:    ... okay on input line 18.
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count348
-\scratchdimen=\dimen311
+\scratchdimen=\dimen313
 \scratchbox=\box80
 \nofMPsegments=\count349
 \nofMParguments=\count350
 \everyMPshowfont=\toks48
 \MPscratchCnt=\count351
-\MPscratchDim=\dimen312
+\MPscratchDim=\dimen314
 \MPnumerator=\count352
 \makeMPintoPDFobject=\count353
 \everyMPtoPDFconversion=\toks49
@@ -1133,59 +1136,71 @@ sh.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 \c@lstlisting=\count355
- (./web.nav) [1
+ (./web.nav) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+]
 [2
 
 ]
-<images/pcsw.png, id=177, 563.85657pt x 207.77625pt>
+LaTeX Font Info:    Trying to load font information for U+msa on input line 63.
+
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 63.
+
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+<images/pcsw.png, id=181, 563.85657pt x 207.77625pt>
 File: images/pcsw.png Graphic file (type png)
 <use images/pcsw.png>
 Package pdftex.def Info: images/pcsw.png  used on input line 63.
-(pdftex.def)             Requested size: 342.30008pt x 126.1346pt.
+(pdftex.def)             Requested size: 381.79129pt x 140.68675pt.
  [3
 
 ] [4
 
 
  <./images/pcsw.png>]
-<images/ip.png, id=239, 770.88pt x 418.56375pt>
+<images/ip.png, id=253, 770.88pt x 418.56375pt>
 File: images/ip.png Graphic file (type png)
 <use images/ip.png>
 Package pdftex.def Info: images/ip.png  used on input line 88.
-(pdftex.def)             Requested size: 342.2936pt x 185.8547pt.
- [5
+(pdftex.def)             Requested size: 381.79263pt x 207.30145pt.
+
+[5
 
 ]
-Overfull \vbox (0.70825pt too high) detected at line 88
+Overfull \vbox (36.50403pt too high) detected at line 88
  []
 
 [6
 
 
  <./images/ip.png>]
-<images/dns.png, id=302, 794.97pt x 527.9725pt>
+<images/dns.png, id=326, 794.97pt x 527.9725pt>
 File: images/dns.png Graphic file (type png)
 <use images/dns.png>
 Package pdftex.def Info: images/dns.png  used on input line 113.
-(pdftex.def)             Requested size: 262.8625pt x 174.57788pt.
+(pdftex.def)             Requested size: 265.67673pt x 176.44691pt.
  [7
 
 ] [8
 
 
  <./images/dns.png>]
-<images/enc.png, id=360, 323.70938pt x 237.88875pt>
+<images/enc.png, id=395, 323.70938pt x 237.88875pt>
 File: images/enc.png Graphic file (type png)
 <use images/enc.png>
 Package pdftex.def Info: images/enc.png  used on input line 153.
-(pdftex.def)             Requested size: 237.57036pt x 174.58658pt.
-<images/tcp_http.png, id=361, 375.4025pt x 321.2pt>
+(pdftex.def)             Requested size: 240.1191pt x 176.4596pt.
+<images/tcp_http.png, id=396, 375.4025pt x 321.2pt>
 File: images/tcp_http.png Graphic file (type png)
 <use images/tcp_http.png>
 Package pdftex.def Info: images/tcp_http.png  used on input line 153.
-(pdftex.def)             Requested size: 204.04326pt x 174.58247pt.
+(pdftex.def)             Requested size: 206.23143pt x 176.4547pt.
  [9
 
 ] [10
@@ -1198,16 +1213,16 @@ Package pdftex.def Info: images/tcp_http.png  used on input line 153.
 
 
  <./images/tcp_http.png>]
-<images/udp_enc.png, id=478, 675.52374pt x 192.72pt>
+<images/udp_enc.png, id=533, 675.52374pt x 192.72pt>
 File: images/udp_enc.png Graphic file (type png)
 <use images/udp_enc.png>
 Package pdftex.def Info: images/udp_enc.png  used on input line 184.
-(pdftex.def)             Requested size: 342.2964pt x 97.65364pt.
-<images/udp_header.png, id=479, 375.4025pt x 128.48pt>
+(pdftex.def)             Requested size: 381.79532pt x 108.92227pt.
+<images/udp_header.png, id=534, 375.4025pt x 128.48pt>
 File: images/udp_header.png Graphic file (type png)
 <use images/udp_header.png>
 Package pdftex.def Info: images/udp_header.png  used on input line 184.
-(pdftex.def)             Requested size: 342.31564pt x 117.15614pt.
+(pdftex.def)             Requested size: 381.81712pt x 130.67537pt.
  [13
 
 ] [14
@@ -1219,113 +1234,117 @@ Package pdftex.def Info: images/udp_header.png  used on input line 184.
  <./images/udp_header.png>] [16
 
 ]
-<images/pdp7.jpeg, id=597, 1204.5pt x 903.375pt>
+<images/pdp7.jpeg, id=672, 1204.5pt x 903.375pt>
 File: images/pdp7.jpeg Graphic file (type jpg)
 <use images/pdp7.jpeg>
 Package pdftex.def Info: images/pdp7.jpeg  used on input line 242.
-(pdftex.def)             Requested size: 232.77214pt x 174.5791pt.
-<images/DEC_VT100_terminal.jpg, id=598, 220.825pt x 195.73125pt>
+(pdftex.def)             Requested size: 235.2717pt x 176.45378pt.
+<images/DEC_VT100_terminal.jpg, id=673, 220.825pt x 195.73125pt>
 File: images/DEC_VT100_terminal.jpg Graphic file (type jpg)
 <use images/DEC_VT100_terminal.jpg>
 Package pdftex.def Info: images/DEC_VT100_terminal.jpg  used on input line 242.
 
-(pdftex.def)             Requested size: 196.97165pt x 174.5885pt.
+(pdftex.def)             Requested size: 199.08434pt x 176.46112pt.
  [17
 
-] [18
-
-
- <./images/pdp7.jpeg>] [19
-
-
- <./images/DEC_VT100_terminal.jpg>] [20
-
-
 ]
-<images/html.png, id=709, 335.2525pt x 321.2pt>
+Overfull \vbox (310.91628pt too high) detected at line 242
+ []
+
+[18
+
+
+ <./images/pdp7.jpeg> <./images/DEC_VT100_terminal.jpg>]
+<images/html.png, id=741, 335.2525pt x 321.2pt>
 File: images/html.png Graphic file (type png)
 <use images/html.png>
 Package pdftex.def Info: images/html.png  used on input line 284.
-(pdftex.def)             Requested size: 182.22046pt x 174.58247pt.
-<images/json.png, id=710, 1231.60126pt x 564.1075pt>
+(pdftex.def)             Requested size: 184.17459pt x 176.4547pt.
+<images/json.png, id=742, 1231.60126pt x 564.1075pt>
 File: images/json.png Graphic file (type png)
 <use images/json.png>
 Package pdftex.def Info: images/json.png  used on input line 284.
-(pdftex.def)             Requested size: 342.29019pt x 156.77838pt.
- [21
+(pdftex.def)             Requested size: 381.79245pt x 174.8715pt.
+ [19
 
-] [22
-
-
-] [23
+] [20
 
 
- <./images/html.png>] [24
+] [21
 
 
- <./images/json.png (PNG copy)>] [25
+ <./images/html.png>]
+Overfull \vbox (4.07408pt too high) detected at line 284
+ []
+
+[22
+
+
+ <./images/json.png (PNG copy)>] [23
 
 ]
-<images/reqres.png, id=854, 699.61375pt x 239.89626pt>
+<images/reqres.png, id=914, 699.61375pt x 239.89626pt>
 File: images/reqres.png Graphic file (type png)
 <use images/reqres.png>
 Package pdftex.def Info: images/reqres.png  used on input line 353.
-(pdftex.def)             Requested size: 342.30133pt x 117.37448pt.
-<images/httpmsgstructure.png, id=855, 1243.64626pt x 369.38pt>
+(pdftex.def)             Requested size: 381.79968pt x 130.9184pt.
+<images/httpmsgstructure.png, id=915, 1243.64626pt x 369.38pt>
 File: images/httpmsgstructure.png Graphic file (type png)
 <use images/httpmsgstructure.png>
 Package pdftex.def Info: images/httpmsgstructure.png  used on input line 353.
-(pdftex.def)             Requested size: 342.29791pt x 101.66718pt.
-<images/url.png, id=856, 709.65125pt x 168.63pt>
+(pdftex.def)             Requested size: 381.78798pt x 113.39626pt.
+<images/url.png, id=916, 709.65125pt x 168.63pt>
 File: images/url.png Graphic file (type png)
 <use images/url.png>
 Package pdftex.def Info: images/url.png  used on input line 353.
-(pdftex.def)             Requested size: 342.2963pt x 81.33772pt.
- [26
+(pdftex.def)             Requested size: 381.79826pt x 90.72433pt.
+ [24
 
- <./images/reqres.png (PNG copy)>] [27
+ <./images/reqres.png (PNG copy)>]
+[25
 
 
- <./images/httpmsgstructure.png>] [28
+ <./images/httpmsgstructure.png>] [26
 
+
+] [27
+
+
+ <./images/url.png>] [28
 
 ] [29
 
-
- <./images/url.png>] [30
+]
+[30
 
 ] [31
 
 ] [32
 
-] [33
-
-] [34
-
 ]
-<images/transaction.png, id=1107, 376.40625pt x 383.4325pt>
+<images/transaction.png, id=1221, 376.40625pt x 383.4325pt>
 File: images/transaction.png Graphic file (type png)
 <use images/transaction.png>
 Package pdftex.def Info: images/transaction.png  used on input line 478.
-(pdftex.def)             Requested size: 195.87021pt x 199.52646pt.
- [35
+(pdftex.def)             Requested size: 197.96658pt x 201.66197pt.
+ [33
 
-] [36
+] [34
+
+
+] [35
+
+
+ <./images/transaction.png>] [36
+
+] [37
+
+
+] [38
 
 
 ]
-[37
-
-
- <./images/transaction.png>] [38
-
-] [39
-
-
-] [40
-
-
-] [41
+[39
 
 
 
@@ -1335,92 +1354,95 @@ pdfTeX warning (ext4): destination with the same identifier (name{fig:orm}) has
                                                   \__shipout_drop_firstpage_...
 l.521     \end{frame}
                      ]
-<images/sqlinjection.png, id=1303, 662.475pt x 304.13625pt>
+<images/sqlinjection.png, id=1460, 662.475pt x 304.13625pt>
 File: images/sqlinjection.png Graphic file (type png)
 <use images/sqlinjection.png>
 Package pdftex.def Info: images/sqlinjection.png  used on input line 541.
-(pdftex.def)             Requested size: 342.29543pt x 157.14471pt.
- [42
+(pdftex.def)             Requested size: 381.7895pt x 175.27608pt.
+ [40
 
-] [43
+] [41
 
 
  <./images/sqlinjection.png>]
-<images/proxy.png, id=1362, 440.64626pt x 245.91875pt>
+<images/proxy.png, id=1529, 440.64626pt x 245.91875pt>
 File: images/proxy.png Graphic file (type png)
 <use images/proxy.png>
 Package pdftex.def Info: images/proxy.png  used on input line 572.
-(pdftex.def)             Requested size: 312.82741pt x 174.58476pt.
-<images/orm.png, id=1363, 1204.5pt x 454.69875pt>
+(pdftex.def)             Requested size: 316.18254pt x 176.45721pt.
+<images/orm.png, id=1530, 1204.5pt x 454.69875pt>
 File: images/orm.png Graphic file (type png)
 <use images/orm.png>
 Package pdftex.def Info: images/orm.png  used on input line 572.
-(pdftex.def)             Requested size: 342.2936pt x 129.21582pt.
+(pdftex.def)             Requested size: 381.79042pt x 144.12587pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{fig:orm}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.572     \end{frame}
-                      [44
+                      [42
 
-] [45
+] [43
 
 
- <./images/proxy.png>] [46
+ <./images/proxy.png>] [44
 
 
  <./images/orm.png>]
-<images/connpool.png, id=1448, 515.9275pt x 291.0875pt>
+<images/connpool.png, id=1635, 515.9275pt x 291.0875pt>
 File: images/connpool.png Graphic file (type png)
 <use images/connpool.png>
 Package pdftex.def Info: images/connpool.png  used on input line 594.
-(pdftex.def)             Requested size: 342.3081pt x 193.13103pt.
+(pdftex.def)             Requested size: 381.80399pt x 215.41469pt.
+
+[45
+
+] [46
+
+
+]
+Overfull \vbox (14.07329pt too high) detected at line 594
+ []
 
 [47
 
-]
-Overfull \vbox (6.64061pt too high) detected at line 594
- []
-
-[48
-
 
  <./images/connpool.png>]
-<images/liquibase.png, id=1506, 838.13126pt x 508.90125pt>
+<images/liquibase.png, id=1738, 838.13126pt x 508.90125pt>
 File: images/liquibase.png Graphic file (type png)
 <use images/liquibase.png>
 Package pdftex.def Info: images/liquibase.png  used on input line 635.
-(pdftex.def)             Requested size: 342.29321pt x 207.83551pt.
- [49
+(pdftex.def)             Requested size: 381.78514pt x 231.81444pt.
+ [48
 
-] [50
+] [49
 
 
 ]
-Overfull \vbox (6.74509pt too high) detected at line 635
+Overfull \vbox (30.47304pt too high) detected at line 635
  []
 
-[51
+[50
 
 
  <./images/liquibase.png>]
 File: images/url.png Graphic file (type png)
 <use images/url.png>
 Package pdftex.def Info: images/url.png  used on input line 656.
-(pdftex.def)             Requested size: 342.2963pt x 81.33772pt.
+(pdftex.def)             Requested size: 381.79826pt x 90.72433pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{fig:url}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.656     \end{frame}
-                      [52
+                      [51
+
+] [52
+
 
 ] [53
-
-
-] [54
 
 ]
 \openout4 = `web.vrb'.
@@ -1435,42 +1457,27 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 (/usr/share/texmf-dist/tex/latex/listings/lstlang3.sty
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
-
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
-
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
 LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 
 4.
 
 (/usr/share/texmf-dist/tex/latex/base/ts1cmss.fd
 File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-Overfull \hbox (225.64732pt too wide) in paragraph at lines 4--5
+Overfull \hbox (186.15128pt too wide) in paragraph at lines 4--5
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (199.53502pt too wide) in paragraph at lines 5--6
+Overfull \hbox (160.03897pt too wide) in paragraph at lines 5--6
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (3.69273pt too wide) in paragraph at lines 8--10
-[][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (95.0858pt too wide) in paragraph at lines 10--11
+Overfull \hbox (55.58975pt too wide) in paragraph at lines 10--11
 [][][][][][][][][][][][][][][][][][] 
  []
 
-) [55
+) [54
 
 ]
 \openout4 = `web.vrb'.
@@ -1478,306 +1485,280 @@ Overfull \hbox (95.0858pt too wide) in paragraph at lines 10--11
  (./web.vrb (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-Overfull \hbox (55.91734pt too wide) in paragraph at lines 8--9
+Overfull \hbox (16.4213pt too wide) in paragraph at lines 8--9
 [][][][][][][][][][] 
  []
 
 
-Overfull \hbox (75.50157pt too wide) in paragraph at lines 10--11
+Overfull \hbox (36.00552pt too wide) in paragraph at lines 10--11
 [][][][][][][][][][][][][][] 
  []
 
-) [56
+) [55
 
-] [57
+] [56
 
 ]
 \openout4 = `web.vrb'.
 
  (./web.vrb
-Overfull \hbox (356.20885pt too wide) in paragraph at lines 4--5
+Overfull \hbox (316.7128pt too wide) in paragraph at lines 4--5
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (160.36656pt too wide) in paragraph at lines 5--6
+Overfull \hbox (120.87051pt too wide) in paragraph at lines 5--6
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (186.47887pt too wide) in paragraph at lines 8--9
+Overfull \hbox (146.98282pt too wide) in paragraph at lines 8--9
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (68.9735pt too wide) in paragraph at lines 14--16
+Overfull \hbox (29.47745pt too wide) in paragraph at lines 14--16
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (3.69273pt too wide) in paragraph at lines 18--19
+Overfull \hbox (94.75821pt too wide) in paragraph at lines 24--25
 [][][][][][][][][][][][][][][][][][] 
  []
 
-
-Overfull \hbox (134.25426pt too wide) in paragraph at lines 24--25
-[][][][][][][][][][][][][][][][][][] 
- []
-
-) [58
+) [57
 
 ]
 \openout4 = `web.vrb'.
 
  (./web.vrb
-Overfull \hbox (42.86119pt too wide) in paragraph at lines 7--9
+Overfull \hbox (3.36514pt too wide) in paragraph at lines 7--9
 [][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (3.69273pt too wide) in paragraph at lines 10--12
-[][][][][][][][][] 
- []
-
-
-Overfull \hbox (153.83849pt too wide) in paragraph at lines 12--14
+Overfull \hbox (114.34244pt too wide) in paragraph at lines 12--14
 [][][][][][][][][][][][][][] 
  []
 
-) [59
+) [58
 
-] [60
+] [59
 
 ]
 \openout4 = `web.vrb'.
 
  (./web.vrb
-Overfull \hbox (225.64732pt too wide) in paragraph at lines 4--5
+Overfull \hbox (186.15128pt too wide) in paragraph at lines 4--5
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (108.14195pt too wide) in paragraph at lines 5--6
+Overfull \hbox (68.6459pt too wide) in paragraph at lines 5--6
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
+) [60
 
-Overfull \hbox (23.27696pt too wide) in paragraph at lines 10--11
-[][][][][][][][][][][][][][][][][][][][][][][][] 
- []
+]
+\openout4 = `web.vrb'.
 
-) [61
+ (./web.vrb) [61
+
+] [62
+
+]
+\openout4 = `web.vrb'.
+
+ (./web.vrb) [63
 
 ]
 \openout4 = `web.vrb'.
 
  (./web.vrb
-Overfull \hbox (23.27696pt too wide) in paragraph at lines 10--11
-[][][][][][][][][][][][][][][] 
- []
-
-) [62
-
-] [63
-
-]
-\openout4 = `web.vrb'.
-
- (./web.vrb) [64
-
-]
-\openout4 = `web.vrb'.
-
- (./web.vrb
-Overfull \hbox (55.91734pt too wide) in paragraph at lines 8--9
+Overfull \hbox (16.4213pt too wide) in paragraph at lines 8--9
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 )
-Overfull \vbox (2.67319pt too high) detected at line 907
+Overfull \vbox (27.84854pt too high) detected at line 907
  []
 
-[65
+[64
 
-] [66
+] [65
 
 ]
 \openout4 = `web.vrb'.
 
  (./web.vrb
-Overfull \hbox (55.91734pt too wide) in paragraph at lines 5--6
+Overfull \hbox (16.4213pt too wide) in paragraph at lines 5--6
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (114.67003pt too wide) in paragraph at lines 6--7
+Overfull \hbox (75.17398pt too wide) in paragraph at lines 6--7
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (75.50157pt too wide) in paragraph at lines 7--8
+Overfull \hbox (36.00552pt too wide) in paragraph at lines 7--8
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (62.44542pt too wide) in paragraph at lines 8--9
+Overfull \hbox (22.94937pt too wide) in paragraph at lines 8--9
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (55.91734pt too wide) in paragraph at lines 9--10
+Overfull \hbox (16.4213pt too wide) in paragraph at lines 9--10
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (29.80504pt too wide) in paragraph at lines 10--11
+Overfull \hbox (3.36514pt too wide) in paragraph at lines 11--12
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (42.86119pt too wide) in paragraph at lines 11--12
-[][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (82.02965pt too wide) in paragraph at lines 12--13
+Overfull \hbox (42.5336pt too wide) in paragraph at lines 12--13
 [][][][][][][][][][][][][][][][][][] 
  []
 
-) [67
+) [66
 
 ]
 \openout4 = `web.vrb'.
 
- (./web.vrb) [68
+ (./web.vrb)
+Overfull \vbox (22.83113pt too high) detected at line 958
+ []
 
-] [69
+[67
+
+] [68
 
 ]
 \openout4 = `web.vrb'.
 
  (./web.vrb
-Overfull \hbox (68.9735pt too wide) in paragraph at lines 4--5
+Overfull \hbox (29.47745pt too wide) in paragraph at lines 4--5
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (140.78233pt too wide) in paragraph at lines 5--6
+Overfull \hbox (101.28629pt too wide) in paragraph at lines 5--6
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (49.38927pt too wide) in paragraph at lines 6--7
+Overfull \hbox (9.89322pt too wide) in paragraph at lines 6--7
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (271.34386pt too wide) in paragraph at lines 9--10
+Overfull \hbox (231.84781pt too wide) in paragraph at lines 9--10
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (42.86119pt too wide) in paragraph at lines 10--11
+Overfull \hbox (3.36514pt too wide) in paragraph at lines 10--11
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (166.89464pt too wide) in paragraph at lines 13--14
+Overfull \hbox (127.39859pt too wide) in paragraph at lines 13--14
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (36.33311pt too wide) in paragraph at lines 15--16
-[][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (10.22081pt too wide) in paragraph at lines 16--17
-[][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (160.36656pt too wide) in paragraph at lines 17--18
+Overfull \hbox (120.87051pt too wide) in paragraph at lines 17--18
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (173.42271pt too wide) in paragraph at lines 20--22
+Overfull \hbox (133.92667pt too wide) in paragraph at lines 20--22
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-
-Overfull \hbox (29.80504pt too wide) in paragraph at lines 22--23
-[][][][][][][][][][][][][][][][] 
+)
+Overfull \vbox (10.52211pt too high) detected at line 1008
  []
 
-) [70
+[69
 
 ]
 \openout4 = `web.vrb'.
 
  (./web.vrb
-Overfull \hbox (42.86119pt too wide) in paragraph at lines 5--6
+Overfull \hbox (3.36514pt too wide) in paragraph at lines 5--6
 [][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (55.91734pt too wide) in paragraph at lines 6--7
+Overfull \hbox (16.4213pt too wide) in paragraph at lines 6--7
 [][][][][][][] 
  []
 
 
-Overfull \hbox (114.67003pt too wide) in paragraph at lines 9--10
+Overfull \hbox (75.17398pt too wide) in paragraph at lines 9--10
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (75.50157pt too wide) in paragraph at lines 16--17
+Overfull \hbox (36.00552pt too wide) in paragraph at lines 16--17
 [][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (258.2877pt too wide) in paragraph at lines 20--21
+Overfull \hbox (218.79166pt too wide) in paragraph at lines 20--21
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (166.89464pt too wide) in paragraph at lines 21--23
+Overfull \hbox (127.39859pt too wide) in paragraph at lines 21--23
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (290.92809pt too wide) in paragraph at lines 23--24
+Overfull \hbox (251.43204pt too wide) in paragraph at lines 23--24
 [][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (140.78233pt too wide) in paragraph at lines 26--27
+Overfull \hbox (101.28629pt too wide) in paragraph at lines 26--27
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (134.25426pt too wide) in paragraph at lines 29--30
+Overfull \hbox (94.75821pt too wide) in paragraph at lines 29--30
 [][][][][][][][][][][] 
  []
 
-) [71
+)
+Overfull \vbox (11.65663pt too high) detected at line 1043
+ []
+
+[70
 
 ]
 File: images/udp_enc.png Graphic file (type png)
 <use images/udp_enc.png>
 Package pdftex.def Info: images/udp_enc.png  used on input line 1067.
-(pdftex.def)             Requested size: 342.2964pt x 97.65364pt.
+(pdftex.def)             Requested size: 381.79532pt x 108.92227pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{fig:udp_enc})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1067     \end{frame}
-                       [72
+                       [71
+
+] [72
+
 
 ] [73
-
 
 ] [74
 
@@ -1787,69 +1768,68 @@ l.1067     \end{frame}
 
 ] [77
 
-] [78
-
 ]
-<images/hashsalt.png, id=2359, 1339.0025pt x 674.52pt>
+<images/hashsalt.png, id=2746, 1339.0025pt x 674.52pt>
 File: images/hashsalt.png Graphic file (type png)
 <use images/hashsalt.png>
 Package pdftex.def Info: images/hashsalt.png  used on input line 1174.
-(pdftex.def)             Requested size: 308.06625pt x 155.18779pt.
- [79
+(pdftex.def)             Requested size: 343.61708pt x 173.09645pt.
+ [78
+
+] [79
+
 
 ] [80
 
 
-] [81
-
-
- <./images/hashsalt.png>] [82
+ <./images/hashsalt.png>] [81
 
 ]
-<images/oauth_overview.png, id=2478, 499.8675pt x 374.14781pt>
+<images/oauth_overview.png, id=2885, 499.8675pt x 374.14781pt>
 File: images/oauth_overview.png Graphic file (type png)
 <use images/oauth_overview.png>
 Package pdftex.def Info: images/oauth_overview.png  used on input line 1230.
-(pdftex.def)             Requested size: 266.56839pt x 199.52483pt.
-<images/oauth.png, id=2479, 169.1118pt x 86.4831pt>
+(pdftex.def)             Requested size: 269.42102pt x 201.66pt.
+<images/oauth.png, id=2886, 169.1118pt x 86.4831pt>
 File: images/oauth.png Graphic file (type png)
 <use images/oauth.png>
 Package pdftex.def Info: images/oauth.png  used on input line 1230.
-(pdftex.def)             Requested size: 342.3308pt x 175.06656pt.
- [83
+(pdftex.def)             Requested size: 381.82951pt x 195.26604pt.
+ [82
 
-] [84
+] [83
 
 
  <./images/oauth_overview.png>]
-Overfull \vbox (2.57614pt too high) detected at line 1230
+Overfull \vbox (22.52464pt too high) detected at line 1230
  []
 
-[85
+[84
 
 
- <./images/oauth.png>] [86
+ <./images/oauth.png>] [85
 
 ]
-<images/jwt.png, id=2597, 1204.5pt x 780.9175pt>
+<images/jwt.png, id=3025, 1204.5pt x 780.9175pt>
 File: images/jwt.png Graphic file (type png)
 <use images/jwt.png>
 Package pdftex.def Info: images/jwt.png  used on input line 1268.
-(pdftex.def)             Requested size: 308.0532pt x 199.72116pt.
-<images/jwt_enc.png, id=2598, 216.0873pt x 116.3547pt>
+(pdftex.def)             Requested size: 343.6169pt x 222.77827pt.
+<images/jwt_enc.png, id=3026, 216.0873pt x 116.3547pt>
 File: images/jwt_enc.png Graphic file (type png)
 <use images/jwt_enc.png>
 Package pdftex.def Info: images/jwt_enc.png  used on input line 1268.
-(pdftex.def)             Requested size: 308.09575pt x 165.8977pt.
- [87
+(pdftex.def)             Requested size: 343.6464pt x 185.04037pt.
+ [86
 
-] [88
+]
+Overfull \vbox (201.87724pt too high) detected at line 1268
+ []
+
+[87
 
 
- <./images/jwt.png (PNG copy)>] [89
-
-
- <./images/jwt_enc.png>]
+ <./images/jwt.png (PNG copy)> <./images/jwt_enc.png>]
 \tf@nav=\write7
 \openout7 = `web.nav'.
 
@@ -1864,14 +1844,14 @@ Package pdftex.def Info: images/jwt_enc.png  used on input line 1268.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `web.out' has not changed.
-(rerunfilecheck)             Checksum: 69F6D99F3D251AF95F1D56FD2999A2BF;3651.
+(rerunfilecheck)             Checksum: 6F30E4D8F72CCF55D78FEA7942A4C772;3483.
  ) 
 Here is how much of TeX's memory you used:
- 27191 strings out of 478238
- 506361 string characters out of 5850456
- 990637 words of memory out of 5000000
- 44599 multiletter control sequences out of 15000+600000
- 486217 words of font info for 68 fonts, out of 8000000 for 9000
+ 27066 strings out of 478238
+ 503268 string characters out of 5850456
+ 986320 words of memory out of 5000000
+ 44477 multiletter control sequences out of 15000+600000
+ 486524 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,122p,407b,1638s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}{/usr/share/
@@ -1881,14 +1861,15 @@ c/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsi1000.pfb></usr
 /share/texmf-dist/fonts/type1/public/cm-super/sfsi1095.pfb></usr/share/texmf-di
 st/fonts/type1/public/cm-super/sfss0600.pfb></usr/share/texmf-dist/fonts/type1/
-public/cm-super/sfss1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super
-/sfss1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb><
-/usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx1000.pfb></usr/share/texm
-f-dist/fonts/type1/public/cm-super/sfsx1095.pfb>
-Output written on web.pdf (89 pages, 1337892 bytes).
+public/cm-super/sfss0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super
+/sfss1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb><
+/usr/share/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/share/texm
+f-dist/fonts/type1/public/cm-super/sfsx1000.pfb></usr/share/texmf-dist/fonts/ty
+pe1/public/cm-super/sfsx1095.pfb>
+Output written on web.pdf (87 pages, 1336373 bytes).
 PDF statistics:
- 2790 PDF objects out of 2984 (max. 8388607)
- 2595 compressed objects within 26 object streams
- 226 named destinations out of 1000 (max. 500000)
- 392 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3203 PDF objects out of 3580 (max. 8388607)
+ 3012 compressed objects within 31 object streams
+ 222 named destinations out of 1000 (max. 500000)
+ 344 words of extra memory for PDF output out of 10000 (max. 10000000)
 
