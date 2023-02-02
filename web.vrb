@@ -1,5 +1,5 @@
 \frametitle{Пример имплементације: Java/Spring}
-\begin{adjustbox}{width=\textwidth,height=0.7\textheight,keepaspectratio}
+\begin{adjustbox}{width=\textwidth,height=0.4\textheight,keepaspectratio}
             \begin{lstlisting}[language=java]
 @Override
 protected void doFilterInternal(HttpServletRequest request,

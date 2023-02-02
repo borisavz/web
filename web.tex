@@ -21,18 +21,6 @@
         \maketitle
     \end{frame}
 
-    \begin{frame}{Садржај}
-        \begin{enumerate}
-            \item Основни појмови мрежног програмирања
-            \item Клијент-сервер архитектура
-            \item Еволуција веб апликација
-            \item HTTP протокол
-            \item Рад са базом података
-            \item Архитектура веб апликације
-            \item Аутентификација и ауторизација
-        \end{enumerate}
-    \end{frame}
-
     \section{Основе мрежног програмирања}
     \subsection[]{Packet switching}
 
@@ -81,7 +69,7 @@
 
         \begin{figure}
             \centering
-            \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/ip.png}
+            \includegraphics[width=\textwidth,height=0.7\textheight,keepaspectratio]{images/ip.png}
             \caption{упрошћена структура IP пакета}
             \label{fig:ip}
         \end{figure}
@@ -210,7 +198,7 @@
         
         \begin{figure}
             \centering
-            \includegraphics[width=\textwidth,height=0.7\textheight,keepaspectratio]{images/pdp7.jpeg}
+            \includegraphics[width=\textwidth,height=0.55\textheight,keepaspectratio]{images/pdp7.jpeg}
             \caption{PDP-7 (рачунар)}
             \label{fig:mainframe}
         \end{figure}
@@ -219,7 +207,7 @@
         
         \begin{figure}
             \centering
-            \includegraphics[width=\textwidth,height=0.7\textheight,keepaspectratio]{images/DEC_VT100_terminal.jpg}
+            \includegraphics[width=\textwidth,height=0.55\textheight,keepaspectratio]{images/DEC_VT100_terminal.jpg}
             \caption{DEC VT100 (терминал)}
             \label{fig:terminal}
         \end{figure}
@@ -507,7 +495,7 @@
             \centering
             %\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/orm.png}
             \caption{нормализован модел података}
-            \label{fig:orm}
+            \label{fig:normalized_model}
         \end{figure}
         
         \framebreak
@@ -516,7 +504,7 @@
             \centering
             %\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/orm.png}
             \caption{денормализован модел података}
-            \label{fig:orm}
+            \label{fig:denormalized_model}
         \end{figure}
     \end{frame}
     
@@ -629,7 +617,7 @@
         
         \begin{figure}
             \centering
-            \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/liquibase.png}
+            \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{images/liquibase.png}
             \label{fig:liquibase}
         \end{figure}
     \end{frame}
@@ -651,7 +639,7 @@
             \centering
             \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/url.png}
             \caption{шематски приказ архитектуре}
-            \label{fig:url}
+            \label{fig:arch}
         \end{figure}
     \end{frame}
     
@@ -871,7 +859,7 @@ type User struct {
     \end{frame}
     
     \begin{frame}[fragile]{Пример имплементације: Java/Spring}
-        \begin{adjustbox}{width=0.65\textwidth,height=\textheight,keepaspectratio}
+        \begin{adjustbox}{width=\textwidth,height=0.4\textheight,keepaspectratio}
             \begin{lstlisting}[language=java]
 @Getter
 @Setter
@@ -935,7 +923,7 @@ type RegisterUser struct {
     \end{frame}
     
     \begin{frame}[fragile]{Пример имплементације: Java/Spring}
-        \begin{adjustbox}{width=0.7\textwidth,height=\textheight,keepaspectratio}
+        \begin{adjustbox}{width=\textwidth,height=0.4\textheight,keepaspectratio}
             \begin{lstlisting}[language=java]
 @Getter
 @Setter
@@ -974,7 +962,7 @@ public class CommentDTO {
     \end{frame}
     
     \begin{frame}[fragile]{Пример имплементације: Go/Gorilla Mux}
-        \begin{adjustbox}{width=\textwidth,height=0.7\textheight,keepaspectratio}
+        \begin{adjustbox}{width=\textwidth,height=0.45\textheight,keepaspectratio}
             \begin{lstlisting}[language=go]
 func ExtractJWTUserMiddleware(next http.Handler) http.Handler {
     return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
@@ -1008,7 +996,7 @@ func ExtractJWTUserMiddleware(next http.Handler) http.Handler {
     \end{frame}
     
     \begin{frame}[fragile]{Пример имплементације: Java/Spring}
-        \begin{adjustbox}{width=\textwidth,height=0.7\textheight,keepaspectratio}
+        \begin{adjustbox}{width=\textwidth,height=0.4\textheight,keepaspectratio}
             \begin{lstlisting}[language=java]
 @Override
 protected void doFilterInternal(HttpServletRequest request,
@@ -1043,29 +1031,6 @@ protected void doFilterInternal(HttpServletRequest request,
     \end{frame}
     
     \section{Основе безбедности}
-    \subsection[]{Индирекција}
-    
-    \begin{frame}[allowframebreaks]{Индирекција}
-        \begin{itemize}
-            \item Било који проблем у рачунарству може бити решен још једним нивоом индирекције, осим наравно проблема превише индирекција (David J. Wheeler)
-            \item Индирекција омогућава имплементацију контроле приступа
-            \item Извршавање \textbf{акције} мора да одобри \textbf{посредник} који дефинише правила приступа
-            \item Механизам присутан на свим нивоима апстракције
-            \begin{itemize}
-                \item енкапсулација у ООП, x86 protection rings, системски позиви, изолација процеса, \textbf{бизнис логика}
-            \end{itemize}
-        \end{itemize}
-        
-        \framebreak
-        
-        \begin{figure}
-            \centering
-            \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/udp_enc.png}
-            \caption{шематски приказ индирекције}
-            \label{fig:udp_enc}
-        \end{figure}
-    \end{frame}
-    
     \subsection[]{Основни појмови}
     
     \begin{frame}{Основни појмови}
@@ -1083,6 +1048,29 @@ protected void doFilterInternal(HttpServletRequest request,
                 \item провере права приступа у апликацији (middleware/controller/service)
             \end{itemize}
         \end{itemize}
+    \end{frame}
+    
+    \subsection[]{Индирекција}
+    
+    \begin{frame}[allowframebreaks]{Индирекција}
+        \begin{itemize}
+            \item Било који проблем у рачунарству може бити решен још једним нивоом индирекције, осим наравно проблема превише индирекција (David J. Wheeler)
+            \item Индирекција омогућава имплементацију контроле приступа
+            \item Извршавање \textbf{акције} мора да одобри \textbf{посредник} који дефинише правила приступа
+            \item Механизам присутан на свим нивоима апстракције
+            \begin{itemize}
+                \item енкапсулација у ООП, x86 protection rings, системски позиви, изолација процеса, \textbf{бизнис логика}
+            \end{itemize}
+        \end{itemize}
+        
+        \framebreak
+        
+        \begin{figure}
+            \centering
+            %\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/udp_enc.png}
+            \caption{шематски приказ индирекције}
+            \label{fig:indirection}
+        \end{figure}
     \end{frame}
     
     \subsection[]{RBAC}
@@ -1254,7 +1242,7 @@ protected void doFilterInternal(HttpServletRequest request,
         
         \begin{figure}
             \centering
-            \includegraphics[width=0.9\textwidth,height=0.9\textheight,keepaspectratio]{images/jwt.png}
+            \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{images/jwt.png}
             \label{fig:jwt}
         \end{figure}
         
@@ -1262,7 +1250,7 @@ protected void doFilterInternal(HttpServletRequest request,
         
         \begin{figure}
             \centering
-            \includegraphics[width=0.9\textwidth,height=0.9\textheight,keepaspectratio]{images/jwt_enc.png}
+            \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{images/jwt_enc.png}
             \label{fig:jwt_enc}
         \end{figure}
     \end{frame}
